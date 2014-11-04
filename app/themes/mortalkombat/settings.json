@@ -1,0 +1,246 @@
+{
+    "defaultplayers" : { 
+                    "1":
+                        {
+                            "name": "Player1",                        
+                            "vsavatar": "/app/themes/images/default/guestavatar.jpg",
+                            "stances": {                                                           
+                                "still": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionoffsetx": "0",
+                                        "positionoffsety": "0"
+                                },
+                                "score": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayerscore.png",
+                                        "positionoffsetx": "100",
+                                        "positionoffsety": "0"
+                                },
+                                "finishthem": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionoffsetx": "0",
+                                        "positionoffsety": "0"
+                                },
+                                "scoredon": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionoffsetx": "0",
+                                        "positionoffsety": "0"
+                                },                                
+                                "skunkedon": {
+                                        "image": "/app/themes/mortalkombat/images/default/skunk.jpeg",
+                                        "positionoffsetx": "0",
+                                        "positionoffsety": "0"
+                                },
+                                "skunked": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionoffsetx": "0",
+                                        "positionoffsety": "0"
+                                },
+                                "won":{
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionoffsetx": "0",
+                                        "positionoffsety": "0"
+                                },
+                                "lost":{
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionoffsetx": "0",
+                                        "positionoffsety": "0"
+                                }
+                            },
+                            "taunts" : {                                
+                                "score": {
+                                    "text": ["Take that!", "Bamn!"],
+                                    "timeout": "2000"
+                                },
+                                "finishthem": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "scoredon": {
+                                    "text": "I'll get you!",
+                                    "timeout": "2000"
+                                },                                
+                                "skunked":  {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },                                
+                                "skunkedon":  {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "won": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "lost":  {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force1": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force2": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force3": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force4": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force5": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                }
+                            }
+                        },
+                    "2": 
+                        {
+                            "name": "Player2",
+                            "vsavatar": "/app/themes/images/default/guestavatar.jpg",
+                            "stances": {                                                           
+                                "still": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionx": "0",
+                                        "positiony": "0"
+                                },
+                                "score": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayerscore.png",
+                                        "positionx": "100",
+                                        "positiony": "0"
+                                },
+                                "finishthem": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionx": "0",
+                                        "positiony": "0"
+                                },
+                                "scoredon": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionx": "0",
+                                        "positiony": "0"
+                                },
+                                "skunkedon": {
+                                        "image": "/app/themes/mortalkombat/images/default/skunk.jpeg",
+                                        "positionx": "0",
+                                        "positiony": "0"
+                                },
+                                "skunked": {
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionx": "0",
+                                        "positiony": "0"
+                                },
+                                "won":{
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionx": "0",
+                                        "positiony": "0"
+                                },
+                                "lost":{
+                                        "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                        "positionx": "0",
+                                        "positiony": "0"
+                                }
+                            },
+                            "taunts" : {                                
+                                "score": {
+                                    "text": ["Take that!", "Bamn!"],
+                                    "timeout": "2000"
+                                },
+                                "finishthem": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "scoredon": {
+                                    "text": "I'll get you!",
+                                    "timeout": "2000"
+                                },                               
+                                "skunked":  {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },                                
+                                "skunkedon":  {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "won": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "lost":  {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force1": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force2": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force3": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force4": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                },
+                                "force5": {
+                                    "text": "",
+                                    "timeout": "2000"
+                                }
+                            }
+                        }
+                },
+    "winningscore": "5",            
+    "scoretype": "healthbar",    
+    "messages" : {        
+        "matchstart" : {
+            "text": [ "Ready!", "Fight!!"],
+            "timeout": "2000",
+            "position": "fixed",
+            "type": "sequence"
+        },
+        "goal": {
+            "text": ["Bam!", "POW!", "Zip!!"],
+            "timeout": "2000",
+            "position": "floating",
+            "type": "random"
+        },                
+        "skunked": {
+            "text": "Flawless Victory!",
+            "timeout": "4000",
+            "position": "fixed",
+            "type": "message"
+        },
+        "finishthem": {
+            "text": "Finish Them!!",
+            "timeout": "5000",
+            "position": "fixed",
+            "type": "message"
+        },
+        "winner": {
+            "text": "Wins!",
+            "timeout": "60000",
+            "position": "fixed",
+            "type": "message"
+        }
+    },
+    "backgrounds" : {
+                    "0": {
+                        "name": "Directors Park",
+                        "background": "/app/views/images/director_park.JPG"
+                    },
+                    "1": {
+                        "name": "Barista",
+                        "background": "/app/views/images/barista.jpg"
+                    },
+                    "2": {
+                        "name": "Ground Kontrol",
+                        "background": "/app/views/images/ground_kontrol.jpeg"
+                    }
+    }
+}

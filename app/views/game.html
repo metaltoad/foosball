@@ -1,0 +1,16 @@
+<div id="backdrop" tabindex="0" class="game-background"  ng-keypress="recordInput($event)">
+    <div wins="1"></div>
+    <div wins="2"></div>    
+    <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>  
+    <div class="healthbar-container" healthbar="1"></div>
+    <div class="healthbar-container health2" healthbar="2"></div>
+    <div id="gamemessage" gamemessage></div>
+    <div class="player1container">
+        <div taunt="1"></div>
+        <div player="1"></div>
+    </div>
+    <div class="player2container">
+        <div taunt="2"></div>
+        <div player="2"></div>
+    </div>
+</div>

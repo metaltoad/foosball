@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* Background Image */
+/* line 6, ../sass/style.scss */
+
+/* Fonts */
+@font-face {
+  font-family: 'ArcadeClassic';
+  src: url("../font/arcadeclassic.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+  font-family: 'Lighthouse';
+  src: url("../font/Lighthouse_PersonalUse.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+/* line 30, ../sass/style.scss */
+body {
+  font-family: 'coolvetica', sans-serif;
+  background-color: black;
+  height: 100%;
+}
+
+.taunt {
+  position:relative;
+  padding:15px;
+  margin:1em 0 3em;
+  color:#000;
+  background:#f3961c; /* default background for browsers without gradient support */
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9d835), to(#f3961c));
+  background:-moz-linear-gradient(#f9d835, #f3961c);
+  background:-o-linear-gradient(#f9d835, #f3961c);
+  background:linear-gradient(#f9d835, #f3961c);
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.taunt:after {
+  content:"";
+  position:absolute;
+  bottom:-15px; /* value = - border-top-width - border-bottom-width */
+  left:50px; /* controls horizontal position */
+  border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:#f3961c transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+
+.flip-horizontal {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
+}
+
+.playername {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+}
+
+.healthbar {       
+    height: 30px;
+    background-color: green;
+}
+
+.healthbar-container {
+    width: 30%;
+}
+
+.health2 {    
+    float: right
+}
+
+.healthbarcontainer {    
+    width: 100%;
+    height: 30px;
+    background-color: red;
+}
+
+#playerhealth2 {
+    float: right;
+}
+
+/*crap throw away css FIX ME*/
+.locationtext {
+    color: white;
+    color: white;
+    font-size: 28px;
+    margin-top: -53px;
+    margin-left: 27%;
+}
+
+.gametimer {
+    font-size: 70px;
+    color: red;
+    font-family: fantasy;
+    margin: auto;
+    width: 50%;
+    display: block;
+}
+
+.gamemessage {
+    font-size: 70px;
+    color: red;
+    font-family: fantasy;
+    margin: auto;
+    width: 50%;
+    padding-top: 200px;
+    text-shadow: 3px 3px #5C5C5C;
+}
+
+.game-background {
+    background-size:   cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;        
+    height: 600px;
+}
+
+.player1container {
+    position:fixed;
+    left:100px;
+    bottom:0px;
+}
+
+.player2container {
+    float: right;
+    position:fixed;
+    right:100px;
+    bottom:0px;
+}
+
+.player1 {
+    height: 299px;
+    width: 153px;   
+}
+
+.player2 {
+    height: 299px;
+    width: 153px;   
+}
+
+/* line 36, ../sass/style.scss */
+ul li {
+  display: inline;
+  list-style: none;
+}
+
+/* line 42, ../sass/style.scss */
+.player-images ul {
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0px;
+}
+/* line 46, ../sass/style.scss */
+.player-images ul li:nth-child(1) {
+  padding-right: 11%;
+}
+/* line 49, ../sass/style.scss */
+.player-images ul li:nth-child(2) {
+  padding-left: 11%;
+}
+
+/* line 55, ../sass/style.scss */
+.time-keeping div,
+.score-keeping div {
+  text-align: center;
+  font-size: 75px;
+  color: wheat;
+}
+
+/* line 62, ../sass/style.scss */
+.score-keeping div {
+  font-size: 150px;
+}
+/* line 64, ../sass/style.scss */
+.score-keeping div ul {
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0px;
+}
+/* line 68, ../sass/style.scss */
+.score-keeping div ul li:nth-child(1) {
+  padding-right: 11%;
+}
+/* line 71, ../sass/style.scss */
+.score-keeping div ul li:nth-child(2) {
+  padding-left: 11%;
+}
+
+/* line 78, ../sass/style.scss */
+.game-messages ul {
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0px;
+}
+/* line 83, ../sass/style.scss */
+.game-messages li:nth-child(1) {
+  padding-right: 8%;
+}
+/* line 86, ../sass/style.scss */
+.game-messages li:nth-child(2) {
+  padding-left: 8%;
+}
+
+/* line 91, ../sass/style.scss */
+.title {
+  height: 111px;
+  font-size: 75px;
+  text-align: center;
+  color: wheat;
+}
+
+/* line 98, ../sass/style.scss */
+.goal {
+  font-size: 300px;
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  color: chocolate;
+}
+/* line 104, ../sass/style.scss */
+.goal div {
+  text-align: center;
+}
+
+/* line 109, ../sass/style.scss */
+.finishthem {
+  font-size: 120px;
+  position: absolute;
+  width: 100%;
+  top: 360px;
+  color: chocolate;
+}
+/* line 115, ../sass/style.scss */
+.finishthem div {
+  text-align: center;
+}
+
+/* Animation of spin around */
+/* Message for Players (Skunked or Winner) */
+/* line 136, ../sass/style.scss */
+.message1,
+.message2 {
+  font-size: 60px;
+  color: #E06E2E;
+}
+
+/* line 142, ../sass/style.scss */
+#timer {
+  position: relative;
+  color: wheat;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 25px;
+}
