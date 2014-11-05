@@ -1,7 +1,7 @@
-<!---- ???????? Not sure whats going here---->
-
 <div style="color:white">
-    <h1>LOG into the game with your badge!</h1>
-    <div ng-show="player1user">Player 1 Accepted!</div>
-    <div ng-show="player2user">Player 2 Accepted!</div>    
+    <h1>Foosball!</h1>
+    <h2>Selected Theme:{{themedata.themename}}</h2>
+    Login with tag or press guest button
+    <div ng-show="players[1].name">Welcome {{players[1].name}} as Black Player!</div>
+    <div ng-show="players[2].name">Welcome {{players[2].name}} as Yellow Player!</div>    
 </div>

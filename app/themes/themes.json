@@ -1,5 +1,6 @@
-{
-    "mortalkombat" : "Mortal Kombat",
-    "soccer" : "Soccer",
-    "streetfighter" : "Street Fighter"
-}
+[
+    "mortalkombat",
+    "portland",
+    "soccer",
+    "streetfighter"
+]

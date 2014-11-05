@@ -1,27 +1,32 @@
 'use strict';
 
-app.controller('IntroCtrl', function($scope, $rootScope, $location) {
+app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
 
-  var maxUserIdLength = 6;
+  var maxUserIdLength = 10;
   var usersLoggedIn = 0;
+  var guestLogin1key = "n";
+  var guestLogin2key = "m";
+  var cycleThemekey = "v";
+  var resetKey = "u";
+  $rootScope.currentTheme = 0;
 
   $scope.activeLoginID = false;
   $scope.activeLoginCode = "";
 
   //get a list of valid ids
   //todo ping the service
-  var users = {'493784':
+  var users = { '4129187106':
                   {'name': 'Tom',
                    'avatar': 'views/images/players/10.jpg',
                    'player': 'views/images/player1.jpg'},
-               '435820':
+                '1':
                   {'name': 'Matt',
                    'avatar': 'views/images/players/19.jpg',
                    'player': 'views/images/player2.jpg'},
-               '589992':
+                '2':
                   {'name': 'Chris',
                    'avatar': 'views/images/players/13.jpg'},
-               };
+              };
 
 $rootScope.handleLogin = function($e) {
   var key = String.fromCharCode($e.which);
@@ -33,26 +38,89 @@ $rootScope.handleLogin = function($e) {
     $scope.activeLoginCode += key;
 
     if($scope.activeLoginCode in users) {
-      usersLoggedIn++;
-      $rootScope.players[1] = users[$scope.activeLoginID];
-
+      $rootScope.players[$scope.activeLoginID] = users[$scope.activeLoginCode];
       $scope.activeLoginID = false;
       $scope.activeLoginCode = "";
     }
-    else if(key == 'n') {
-      usersLoggedIn++;
+    else if(key == resetKey) {
+      $scope.activeLoginID = false;
+      $scope.activeLoginCode = "";
+      $rootScope.players = [];
     }
-    else if($scope.activeLoginCode.length > maxUserIdLength) {
+    else if(key == cycleThemekey) {
+      $rootScope.currentTheme++;
+
+      if(currentTheme >= $rootScope.themes.length) {
+        $rootScope.currentTheme = 0;
+      }
+
+      $http.get('/app/themes/' + $rootScope.themes[currentTheme] + '/settings.json').
+        success(function(data, status, headers, config) {
+          $rootScope.themedata = data;
+        });
+
+      //reset the login
+      $scope.activeLoginCode = "";
+      $scope.activeLoginID = false;
+    }
+    else if(key == guestLogin1key) {
+      $rootScope.players[1] = {"name": "Guest"};
+
+      //reset the login
+      $scope.activeLoginCode = "";
+      $scope.activeLoginID = false;
+    }
+    else if(key == guestLogin2key) {
+      $rootScope.players[2] = {"name": "Guest"};
+
+      //reset the login
+      $scope.activeLoginCode = "";
+      $scope.activeLoginID = false;
+    }
+    else if($scope.activeLoginCode.length >= maxUserIdLength) {
       //invalid id, reset
       $scope.activeLoginCode = "";
       $scope.activeLoginID = false;
     }
 
-    if(usersLoggedIn == 2) {
+    if($rootScope.players[1] && $rootScope.players[2]) {
+      for(var id in $rootScope.players) {
+        if($rootScope.players[id].name == "Guest") {
+          $rootScope.players[id] = $rootScope.themedata.defaultplayer;
+        }
+        else {
+          //check all the settings if any are missing set them default
+          //any other settings should be provided, like name, vs avatar
+
+          //these are likely not provided so go with defaults
+
+          if(!$rootScope.players[id]['stances']) {
+            $rootScope.players[id]['stances'] = {};
+          }
+
+          if(!$rootScope.players[id]['taunts']) {
+            $rootScope.players[id]['taunts'] = {};
+          }
+
+          //set the default stances
+          for(key in $rootScope.themedata.defaultplayer['stances']) {
+            if(!$rootScope.players[id]['stances'][key]) {
+              $rootScope.players[id]['stances'][key] = $rootScope.themedata.defaultplayer['stances'][key];
+            }
+          }
+
+          //set the default taunts
+          for(key in $rootScope.themedata.defaultplayer['taunts']) {
+            if(!$rootScope.players[id]['taunts'][key]) {
+              $rootScope.players[id]['taunts'][key] = $rootScope.themedata.defaultplayer['taunts'][key];
+            }
+          }
+        }
+      }
+
       //move to the vs screen
       $location.url("/vs");
     }
   }
 }
-
 });

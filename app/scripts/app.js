@@ -1,7 +1,6 @@
 var app = angular.module('FoozKombat', [
   'ngRoute',
   'timer'
-
 ]);
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -26,15 +25,15 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 app.run(function($http, $rootScope) {
+
+  $rootScope.players = { };
+
   //load the theme settings into scope
   $http.get('/app/themes/themes.json').
     success(function(data, status, headers, config) {
-      //set the theme used
-      var currentTheme = "mortalkombat";
-
       $rootScope.themes = data;
 
-      $http.get('/app/themes/' + currentTheme + '/settings.json').
+      $http.get('/app/themes/' + $rootScope.themes[0] + '/settings.json').
         success(function(data, status, headers, config) {
           $rootScope.themedata = data;
         });
