@@ -144,11 +144,11 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
 
       //switch back to the still stance only if they just left a score stance
 
-      if($rootScope.players[1].currentstance == "score") {
+      if($rootScope.players[1].currentstance == "score" || $rootScope.players[1].currentstance == "scoredon") {
         $rootScope.players[1].currentstance = "still";
       }
 
-      if($rootScope.players[2].currentstance != "score") {
+      if($rootScope.players[2].currentstance == "score" || $rootScope.players[2].currentstance == "scoredon") {
         $rootScope.players[2].currentstance = "still";
       }
 
