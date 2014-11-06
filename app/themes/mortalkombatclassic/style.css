@@ -38,7 +38,7 @@
 }
 
 .playername {
-    color: white;
+    color: yellow;
     font-size: 20px;
     position: absolute;
 }
@@ -99,8 +99,7 @@
 
 .game-background {
     background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;        
+    background-repeat: no-repeat;    
     height: 600px;
 }
 
@@ -119,10 +118,31 @@
 
 .player1 {
     height: 299px;
-    width: 153px;   
+    width: 260px;   
 }
 
 .player2 {
     height: 299px;
-    width: 153px;   
+    width: 260px;   
 }
+
+.vsbackground {
+   height: 607px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 953px;  
+}
+
+//FIX ME these are just to make it show up right just for testing
+.vsavatar .vs1 .ng-scope {
+    padding-top: 115px;
+    padding-left: 120px;
+    width: 325px
+}
+
+.vsavatar.vs2.ng-scope {
+    padding-left: 495px;
+    margin-top: -98px;
+    width: 325px
+}
+

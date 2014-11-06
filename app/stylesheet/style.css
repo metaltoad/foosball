@@ -20,6 +20,11 @@ body {
   height: 100%;
 }
 
+.themebackground {
+    background-size:   cover;                  
+    background-repeat: no-repeat;
+}
+
 /* line 36, ../sass/style.scss */
 ul li {
   display: inline;

@@ -28,7 +28,7 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
     }
 
     //set the background image
-    document.getElementById("backdrop").style.backgroundImage= "url(" + $rootScope.background.background + ")";
+    document.getElementById("backdrop").style.backgroundImage= "url(/app/themes/" + $rootScope.themes[$rootScope.currentTheme] + "/images/" + $rootScope.background.background + ")";
 
     $rootScope.players[1].currentstance = "still";
     $rootScope.players[2].currentstance = "still";
@@ -89,7 +89,7 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
     gamemessages.showRandomTaunt(player, "score");
 
     //only show a reaction 10% of the time
-    var react = Math.floor((Math.random() * 10 + 1));
+    var react = Math.floor((Math.random() * 10) + 1);
 
     if(react == 5) {
       gamemessages.showRandomTaunt(opposing, "scoredon");

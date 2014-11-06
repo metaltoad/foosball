@@ -50,11 +50,11 @@ $rootScope.handleLogin = function($e) {
     else if(key == cycleThemekey) {
       $rootScope.currentTheme++;
 
-      if(currentTheme >= $rootScope.themes.length) {
+      if($rootScope.currentTheme >= $rootScope.themes.length) {
         $rootScope.currentTheme = 0;
       }
 
-      $http.get('/app/themes/' + $rootScope.themes[currentTheme] + '/settings.json').
+      $http.get('/app/themes/' + $rootScope.themes[$rootScope.currentTheme] + '/settings.json').
         success(function(data, status, headers, config) {
           $rootScope.themedata = data;
         });
@@ -103,9 +103,16 @@ $rootScope.handleLogin = function($e) {
           }
 
           //set the default stances
+          //get a random default player to use
+          var p = Math.floor((Math.random() * $rootScope.themedata.defaultplayer.provideddefaults) + 1)
+          
           for(key in $rootScope.themedata.defaultplayer['stances']) {
             if(!$rootScope.players[id]['stances'][key]) {
-              $rootScope.players[id]['stances'][key] = $rootScope.themedata.defaultplayer['stances'][key];
+              $rootScope.players[id]['stances'][key] = jQuery.extend({}, $rootScope.themedata.defaultplayer['stances'][key]);
+
+              //prefix the image with the path and the random character
+              $rootScope.players[id]['stances'][key].image = "/app/themes/" + $rootScope.themes[$rootScope.currentTheme] + "/images/players/" + p + "/" + $rootScope.themedata.defaultplayer['stances'][key].image;
+
             }
           }
 

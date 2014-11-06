@@ -1,49 +1,50 @@
 {
-    "themename": "Mortal Kombat",
-    "themebackground": "Picture shown on login screen",
-    "graphicstype": "user",
+    "themename": "Mortal Kombat Classic",
+    "themebackground": "title.png",
+    "vsbackground": "vs.png",
+    "graphicstype": "provided",
     "defaultplayer" : {                  
                         "name": "Player",
-                        "vsavatar": "/app/themes/images/default/guestavatar.jpg",                        
-                        "provideddefaults": "2",
+                        "vsavatar": "guestavatar.jpg",                                                
+                        "provideddefaults": "5",
                         "stances": {                                                           
                             "still": {
-                                    "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                    "image": "still.gif",
                                     "positionoffsetx": "0",
                                     "positionoffsety": "0"
                             },
                             "score": {
-                                    "image": "/app/themes/mortalkombat/images/default/guestplayerscore.png",
-                                    "positionoffsetx": "100",
+                                    "image": "score.gif",
+                                    "positionoffsetx": "350",
                                     "positionoffsety": "0"
                             },
                             "finishthem": {
-                                    "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                    "image": "finishthem.gif",
                                     "positionoffsetx": "0",
                                     "positionoffsety": "0"
                             },
                             "scoredon": {
-                                    "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
-                                    "positionoffsetx": "0",
+                                    "image": "scoredon.gif",
+                                    "positionoffsetx": "350",
                                     "positionoffsety": "0"
                             },                                
                             "skunkedon": {
-                                    "image": "/app/themes/mortalkombat/images/default/skunk.jpeg",
+                                    "image": "lost.gif",
                                     "positionoffsetx": "0",
                                     "positionoffsety": "0"
                             },
                             "skunked": {
-                                    "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                    "image": "won.gif",
                                     "positionoffsetx": "0",
                                     "positionoffsety": "0"
                             },
                             "won":{
-                                    "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                    "image": "won.gif",
                                     "positionoffsetx": "0",
                                     "positionoffsety": "0"
                             },
                             "lost":{
-                                    "image": "/app/themes/mortalkombat/images/default/guestplayer.png",
+                                    "image": "lost.gif",
                                     "positionoffsetx": "0",
                                     "positionoffsety": "0"
                             }
@@ -135,16 +136,26 @@
     },
     "backgrounds" : {
                     "0": {
-                        "name": "Directors Park",
-                        "background": "/app/views/images/director_park.JPG"
+                        "name": "Palace Gates",
+                        "background": "arenas/palace_gates.png"
                     },
                     "1": {
-                        "name": "Barista",
-                        "background": "/app/views/images/barista.jpg"
+                        "name": "Court Yard",
+                        "background": "arenas/court_yard.png"
                     },
                     "2": {
-                        "name": "Ground Kontrol",
-                        "background": "/app/views/images/ground_kontrol.jpeg"
+                        "name": "The Pit",
+                        "background": "arenas/the_pit.png"
+                    },
+                    "2": {
+                        "name": "Throne Room",
+                        "background": "arenas/throneroom.png"
+                    },
+                    "2": {
+                        "name": "Warrior Shrine",
+                        "background": "arenas/warriorshrine.png"
                     }
+                    
+                    
     }
 }
