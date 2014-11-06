@@ -1,9 +1,7 @@
-<div class="themebackground" style="background-image:url('/app/themes/{{themes[currentTheme]}}/images/{{themedata.themebackground}}');width:100%;height:800px">
-    <div style="color:white" class="fixme">
-        <h1>Foosball!</h1>
-        <h2>Selected Theme:{{themedata.themename}}</h2>
-        Login with tag or press guest button
+<div class="themebackground" >
+  <img src="/app/themes/{{themes[currentTheme]}}/images/{{themedata.themebackground}}" />
+    <div class="login">
         <div ng-show="players[1].name">Welcome {{players[1].name}} as Black Player!</div>
-        <div ng-show="players[2].name">Welcome {{players[2].name}} as Yellow Player!</div>    
+        <div ng-show="players[2].name">Welcome {{players[2].name}} as Yellow Player!</div>
     </div>
 </div>

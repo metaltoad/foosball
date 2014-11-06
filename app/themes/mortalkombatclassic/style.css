@@ -43,7 +43,7 @@
     position: absolute;
 }
 
-.healthbar {       
+.healthbar {
     height: 28px;
     background-color: green;
 }
@@ -52,11 +52,11 @@
     width: 30%;
 }
 
-.health2 {    
+.health2 {
     float: right
 }
 
-.healthbarcontainer {    
+.healthbarcontainer {
     width: 100%;
     height: 30px;
     background-color: red;
@@ -99,7 +99,7 @@
 
 .game-background {
     background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     height: 600px;
 }
 
@@ -118,19 +118,19 @@
 
 .player1 {
     height: 299px;
-    width: 260px;   
+    width: 260px;
 }
 
 .player2 {
     height: 299px;
-    width: 260px;   
+    width: 260px;
 }
 
 .vsbackground {
    height: 607px;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 953px;  
+    width: 953px;
 }
 
 //FIX ME these are just to make it show up right just for testing

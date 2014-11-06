@@ -20,11 +20,6 @@ body {
   height: 100%;
 }
 
-.themebackground {
-    background-size:   cover;                  
-    background-repeat: no-repeat;
-}
-
 /* line 36, ../sass/style.scss */
 ul li {
   display: inline;
@@ -138,4 +133,19 @@ ul li {
   text-align: center;
   font-size: 60px;
   margin-top: 25px;
+}
+
+/* Jenny Starts */
+.login {
+  color: #fff;
+  background-color: #000;
+  position: absolute;
+  top:0;
+  font-size: 25px;
+  width: 100%;
+}
+.themebackground img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
