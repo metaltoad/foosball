@@ -23,6 +23,10 @@ app.directive('player', function() {
       //watch for any stance change to the player avatar
       $scope.$watch(function() { return $rootScope.players[$scope.player].currentstance;  },
         function(newValue, oldValue) {
+          if(!$rootScope.players[$scope.player].currentstance) {
+            $rootScope.players[$scope.player].currentstance = "still";
+          }
+
           //if there is an adjustment to the stance apply it
           $scope.playerImage = "url(" + $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].image + ")";
 

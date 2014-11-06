@@ -110,6 +110,7 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
       if($rootScope.players[opposing].health == 1) {
         gamemessages.showMessage("finishthem");
         gamemessages.showRandomTaunt(player, "finishthem");
+        $rootScope.players[opposing].currentstance = "finishthem";
       }
 
       //check for a win
@@ -140,8 +141,17 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
     //start the score timeout
     $timeout(function() {
       $scope.scoreInterval = false;
-      $rootScope.players[1].currentstance = "still";
-      $rootScope.players[2].currentstance = "still";
+
+      //switch back to the still stance only if they just left a score stance
+
+      if($rootScope.players[1].currentstance == "score") {
+        $rootScope.players[1].currentstance = "still";
+      }
+
+      if($rootScope.players[2].currentstance != "score") {
+        $rootScope.players[2].currentstance = "still";
+      }
+
     }, scoreTimeout);
   }
 
@@ -193,8 +203,13 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
 
     //kill the timer
     $scope.$emit("timer-stop");
+
+    //reset things
+    $timeout(function() {
+      $rootScope.players = {};
+      $location.url("/");
+    }, 10000);
   }
 
   $scope.newGame();
-
 });

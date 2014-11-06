@@ -1,7 +1,7 @@
 <div ng-hide="players[1].name || players[2].name" class="themebackground" >
   <img ng-hide="players[1].name || players[2].name" src="/app/themes/{{themes[currentTheme]}}/images/{{themedata.themebackground}}" />
 </div>
-<div class="welcome">
+<div ng-show="players[1].name || players[2].name" class="welcome">
     <img src="/app/themes/{{themes[currentTheme]}}/images/welcome.png">
     <!--- these should display in that box somehow use the style.css from this game theme for this not the main one---->
     <div class="welcomeplayer" ng-show="players[1].name">Black Player: {{players[1].name}} Accepted!</div>
