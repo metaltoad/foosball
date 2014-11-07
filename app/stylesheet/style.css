@@ -20,13 +20,17 @@
   position: absolute;
 }
 .playerbox {
-  background-color: #bbb; /* replace with background image */
   position: absolute;
-  bottom: 100px;
-  left: 50%;
+  bottom: 23%;
+  left: 15%;
+  max-width: 70%;
 }
 .welcomeplayer {
-  font-size: 25px;
-  color: #fff; /* yellow to match Welcome text, also try to find a matching font */
+  font-size: 31px;
+  color: #efe918;
   text-transform: uppercase;
+  text-shadow: 4px 4px 2px #000;
+  font-family: Impact, Charcoal, sans-serif;
+  letter-spacing: 2px;
+  padding: 20px;
 }
