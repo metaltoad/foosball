@@ -11,3 +11,22 @@
   height: 100%;
   position: absolute;
 }
+
+/* Mortal Kombat Classic welcome page styles */
+/* needs to be here since the theme stylesheet isn't attached to /app */
+.welcome img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.playerbox {
+  background-color: #bbb; /* replace with background image */
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+}
+.welcomeplayer {
+  font-size: 25px;
+  color: #fff; /* yellow to match Welcome text, also try to find a matching font */
+  text-transform: uppercase;
+}
