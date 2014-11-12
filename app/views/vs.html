@@ -1,9 +1,16 @@
 <link type="text/css" href="/app/themes/{{themes[currentTheme]}}/style.css" rel="stylesheet">
-<!---VS avatars --->
-<div class="vsbackground" style="background-image:url(/app/themes/{{themes[currentTheme]}}/images/{{themedata.vsbackground}});">
-    <div class="vsavatar vs1" vsavatar="1"></div>
-    <div class="vsavatar vs2" vsavatar="2"></div>    
+<!---VS avatars -->
+
+<div class="vsbackground">
+  <div class="avatarcontainer">
+    <div class="avatar">
+      <div class="vsavatar vs1 img-left" vsavatar="1"></div>
+    </div>
+    <div class="avatar">
+      <div class="vsavatar vs2 img-right" vsavatar="2"></div>
+    </div>
+  </div>
+  <!---Entering arena X-->
+  <div class="kombatzone" vslocation="random"></div>
 </div>
 
-<!---Entering arena X---->
-<div vslocation="random"></div>

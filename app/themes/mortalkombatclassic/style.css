@@ -1,15 +1,31 @@
-/* Mortal Kombat Classic welcome page styles */
+
+
+
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+/************************************************************
+      Mortal Kombat Classic welcome page styles
+************************************************************/
+
+
 .welcome img {
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   position: absolute;
 }
+
 .playerbox {
   position: absolute;
   bottom: 23%;
   left: 15%;
   max-width: 70%;
 }
+
 .welcomeplayer {
   font-size: 31px;
   color: #efe918;
@@ -49,122 +65,161 @@
   width:0;
 }
 
-
 .flip-horizontal {
-    -moz-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    transform: scaleX(-1);
-    -ms-filter: fliph; /*IE*/
-    filter: fliph; /*IE*/
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph; /*IE*/
+  filter: fliph; /*IE*/
 }
 
 .playername {
-    color: yellow;
-    font-size: 20px;
-    position: absolute;
+  color: yellow;
+  font-size: 20px;
+  position: absolute;
 }
 
 .healthbar {
-    height: 28px;
-    background-color: green;
+  height: 28px;
+  background-color: green;
 }
 
 .healthbar-container {
-    width: 30%;
+  width: 30%;
 }
 
 .health2 {
-    float: right
+  float: right
 }
 
 .healthbarcontainer {
-    width: 100%;
-    height: 30px;
-    background-color: red;
-    border-width: 1px;
-    border-color: yellow;
-    border-style: solid;
+  width: 100%;
+  height: 30px;
+  background-color: red;
+  border-width: 1px;
+  border-color: yellow;
+  border-style: solid;
 }
 
 #playerhealth2 {
-    float: right;
+  float: right;
+}
+
+.gametimer {
+  font-size: 70px;
+  color: red;
+  font-family: fantasy;
+  margin: auto;
+  width: 50%;
+  display: block;
+}
+
+.gamemessage {
+  font-size: 70px;
+  color: red;
+  font-family: fantasy;
+  margin: auto;
+  width: 50%;
+  padding-top: 200px;
+  text-shadow: 3px 3px #5C5C5C;
+}
+
+.game-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.player1container {
+  position:fixed;
+  left:100px;
+  bottom:0px;
+}
+
+.player2container {
+  float: right;
+  position:fixed;
+  right:100px;
+  bottom:0px;
+}
+
+.player1 {
+  height: 299px;
+  width: 260px;
+}
+
+.player2 {
+  height: 299px;
+  width: 260px;
+}
+
+
+/******************************
+      vs. screen styling
+******************************/
+
+
+
+.vsbackground {
+  margin: 0 auto;
+  background-image: url('images/vs.png');
+  max-width: 1824px;
+  background-repeat:no-repeat;
+  background-size: 100%;
+  min-height: 762px;
+  padding-top: 12%;
+}
+
+.vscontainer {
+  width: 100%;
+}
+
+.avatarcontainer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 7.5%;
+  padding: 11% 20.5%;
+  min-height: 73.5%;
+}
+
+.kombatzone {
+  text-align: center;
+  clear: both;
+  margin-top: 23.5%;
+}
+
+.avatar {
+  display: inline;
+}
+
+.img-right {
+  float: right;
+}
+
+.img-left {
+  float: left;
+}
+
+.center {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -150px;
+   margin-top: -150px;
 }
 
 /*crap throw away css FIX ME*/
 .locationtext {
+    width: 100%;
     color: white;
-    color: white;
-    font-size: 28px;
-    margin-top: -53px;
-    margin-left: 27%;
+    font-size: 2em;
 }
 
-.gametimer {
-    font-size: 70px;
-    color: red;
-    font-family: fantasy;
-    margin: auto;
-    width: 50%;
-    display: block;
-}
 
-.gamemessage {
-    font-size: 70px;
-    color: red;
-    font-family: fantasy;
-    margin: auto;
-    width: 50%;
-    padding-top: 200px;
-    text-shadow: 3px 3px #5C5C5C;
-}
 
-.game-background {
-    background-size:   cover;                      /* <------ */
-    background-repeat: no-repeat;
-    height: 600px;
-}
 
-.player1container {
-    position:fixed;
-    left:100px;
-    bottom:0px;
-}
 
-.player2container {
-    float: right;
-    position:fixed;
-    right:100px;
-    bottom:0px;
-}
-
-.player1 {
-    height: 299px;
-    width: 260px;
-}
-
-.player2 {
-    height: 299px;
-    width: 260px;
-}
-
-.vsbackground {
-   height: 607px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 953px;
-}
-
-//FIX ME these are just to make it show up right just for testing
-.vsavatar .vs1 .ng-scope {
-    padding-top: 115px;
-    padding-left: 120px;
-    width: 325px
-}
-
-.vsavatar.vs2.ng-scope {
-    padding-left: 495px;
-    margin-top: -98px;
-    width: 325px
-}
 
