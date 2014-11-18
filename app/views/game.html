@@ -28,8 +28,10 @@
         <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
       </div>
       <div class="header">
-        <div class="healthbar-container img-left" healthbar="1"></div>
-        <div class="healthbar-container img-right" healthbar="2"></div>
+        <div ng-if="themedata.scoretype == 'healthbar'" class="healthbar-container img-left" healthbar="1"></div>
+        <div ng-if="themedata.scoretype == 'healthbar'" class="healthbar-container img-right" healthbar="2"></div>
+        <div ng-if="themedata.scoretype == 'score'" class="healthbar-container img-left" score="1"></div>
+        <div ng-if="themedata.scoretype == 'score'" class="healthbar-container img-right" score="2"></div>
       </div>
       <div class="header">
         <div class="gamemessage" id="gamemessage" gamemessage></div>
