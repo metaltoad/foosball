@@ -5,7 +5,6 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
 
   var player1ScoreKey = "1";
   var player2ScoreKey = "b";
-  var resetKey = "w";
   var scoreTimeout = 2000;
   $scope.scoreInterval = false;
 
@@ -45,11 +44,6 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
       }
       case player2ScoreKey: {
         $scope.score(2);
-        break;
-      }
-      case resetKey: {
-        //send back to the login
-        $location.url("/");
         break;
       }
       case player1ForceKey: {
