@@ -29,6 +29,9 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
     //set the background image
     document.getElementById("backdrop").style.backgroundImage= "url(/app/themes/" + $rootScope.themes[$rootScope.currentTheme] + "/images/" + $rootScope.background.background + ")";
     document.getElementById("backdrop").style.height= window.innerHeight+"px";
+    window.addEventListener("resize", function(e) {
+      document.getElementById("backdrop").style.height= window.innerHeight+"px";
+    });
 
     $rootScope.players[1].currentstance = "still";
     $rootScope.players[2].currentstance = "still";

@@ -307,4 +307,32 @@ body {
 }
 
 
+@media (min-height: 901px) {
+  .player1container, .player2container {
+    zoom: 1.2;
+    bottom: 6%;
+  }
+}
+
+@media (max-height: 600px) {
+  .player1container, .player2container {
+    zoom: .9;
+    bottom: 6%;
+  }
+}
+
+@media (max-height: 400px) {
+  .player1container, .player2container {
+    zoom: .5;
+    bottom: 6%;
+  }
+}
+
+@media (max-height: 250px) {
+  .player1container, .player2container {
+    zoom: .2;
+    bottom: 6%;
+  }
+}
+
 
