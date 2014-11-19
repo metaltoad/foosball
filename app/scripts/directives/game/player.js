@@ -28,7 +28,8 @@ app.directive('player', function() {
           }
 
           //if there is an adjustment to the stance apply it
-          $scope.playerImage = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].image;
+          // $scope.playerImage = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].image;
+          $scope.playerImage = "url(" + $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].image + ")";
 
           $rootScope.players[$scope.player].positionoffsetx = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].positionoffsetx;
           $rootScope.players[$scope.player].positionoffsety = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].positionoffsety;

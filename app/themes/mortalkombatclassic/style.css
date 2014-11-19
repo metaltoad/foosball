@@ -9,6 +9,18 @@
   position: relative;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+#backdrop {
+  height: 100%;
+}
+
 /************************************************************
       Mortal Kombat Classic welcome page styles
 ************************************************************/
@@ -46,8 +58,15 @@
   background-color: green;
 }
 
+.containerbox {
+  position: absolute;
+  bottom: 5%;
+  width: 100%
+}
+
 .healthbar-container {
   width: 30%;
+  display: inline-block;
 }
 
 .healthbarcontainer {
@@ -59,17 +78,13 @@
   border-style: solid;
 }
 
-#playerhealth2 {
-  float: right;
-}
-
 .gametimer, .gamemessage {
   font-size: 5vw;
   color: red;
   font-family: fantasy;
   margin: auto;
-  width: 50%;
-  display: block;
+  display: inline-block;
+  width: 40%;
 }
 
 .gamemessage {
@@ -78,10 +93,9 @@
 }
 
 .game-background {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  min-height: 900px;
-  max-height: 1000px;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center bottom;
 }
 
 
@@ -166,6 +180,10 @@
   position: initial;
 }
 
+.top-info {
+  padding-top: 3%;
+}
+
 .healthbar-container {
   display: inline-block;
 }
@@ -184,12 +202,16 @@
 }
 
 .playercontainer {
-  display: table-cell;
+  display: table;
 }
 
-.playercontainer-inner {
-  display: table;
-  width: 30%;
+.player1container {
+  position: fixed;
+  margin-left: 5%;
+}
+
+.player2container {
+  margin-right: 5%;
 }
 
 .player {

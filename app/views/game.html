@@ -1,81 +1,22 @@
 <link type="text/css" href="/app/themes/{{themes[currentTheme]}}/style.css" rel="stylesheet">
-
 <div id="backdrop" tabindex="0" class="game-background"  ng-keypress="recordInput($event)">
-    <div wins="1"></div>
-    <div wins="2"></div>
-    <!--<timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
-    <div class="healthbar-container img-left" healthbar="1"></div>
-    <div class="healthbar-container img-right" healthbar="2"></div>
-    <div class="gamemessage" id="gamemessage" gamemessage></div>
-
-    <div class="fightercontainer">
-      <div class="playercontainer">
-        <div class="playercontainer-inner img-left">
-          <div class="taunt-box" taunt="1"></div>
-          <div class="player" player="1"></div>
-        </div>
+  <!--<img src="../themes/mortalkombatclassic/images/arenas/warriorshrine.png">-->
+    <div class="container top-info">
+      <div class="healthbar-container img-left" healthbar="1"></div>
+      <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
+      <div class="healthbar-container health2 img-right" healthbar="2"></div>
+    </div>
+    <div class="container">
+      <div id="gamemessage" gamemessage></div>
+    </div>
+    <div class="container containerbox">
+      <div class="player1container img-left">
+          <div taunt="1"></div>
+          <div player="1"></div>
       </div>
-      <div class="playercontainer">
-        <div class="playercontainer-inner img-right">
-          <div class="taunt-box" taunt="2"></div>
-          <div class="player" player="2"></div>
-          </div>
-        </div>
-    </div>-->
-
-    <div class="wrapper">
-      <div class="header">
-        <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
-      </div>
-      <div class="header">
-        <div ng-if="themedata.scoretype == 'healthbar'" class="healthbar-container img-left" healthbar="1"></div>
-        <div ng-if="themedata.scoretype == 'healthbar'" class="healthbar-container img-right" healthbar="2"></div>
-        <div ng-if="themedata.scoretype == 'score'" class="healthbar-container img-left" score="1"></div>
-        <div ng-if="themedata.scoretype == 'score'" class="healthbar-container img-right" score="2"></div>
-      </div>
-      <div class="header">
-        <div class="gamemessage" id="gamemessage" gamemessage></div>
-      </div>
-      <div class="main">
-        <div class="header">
-          <div class="taunt-box" taunt="1"></div>
-          <div class="taunt-box" taunt="2"></div>
-        </div>
-        <div class="box content">
-        <div class="fightercontainer">
-          <div class="playercontainer">
-            <div class="playercontainer-inner img-left">
-              <div class="player" player="1"></div>
-            </div>
-          </div>
-          <div class="playercontainer">
-            <div class="playercontainer-inner img-right">
-              <div class="player" player="2"></div>
-            </div>
-          </div>
-        </div>
+      <div class="player2container img-right">
+          <div taunt="2"></div>
+          <div player="2"></div>
       </div>
     </div>
-
-      <!--<div class="fightercontainer">
-      <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
-      <div class="healthbar-row">
-        <div class="healthbar-container img-left" healthbar="1"></div>
-        <div class="healthbar-container img-right" healthbar="2"></div>
-      </div>
-      <div class="gamemessage" id="gamemessage" gamemessage></div>
-      <div class="taunt-box">
-        <div class="taunt-box img-left" taunt="1"></div>
-        <div class="taunt-box img-right" taunt="2"></div>
-      </div>
-      <div class="playercontainer">
-        <div class="playercontainer-inner img-left">
-          <div class="player" player="1"></div>
-        </div>
-        <div class="playercontainer-inner img-right">
-          <div class="player" player="2"></div>
-        </div>
-      </div>
-    </div>-->
-
 </div>
