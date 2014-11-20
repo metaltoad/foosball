@@ -16,6 +16,8 @@ app.directive('player', function() {
       $scope.marginright = 0;
       $scope.marginbottom = 0;
 
+
+
       if($scope.player == 2) {
         $scope.playerclasses = "flip-horizontal";
       }
@@ -26,6 +28,8 @@ app.directive('player', function() {
           if(!$rootScope.players[$scope.player].currentstance) {
             $rootScope.players[$scope.player].currentstance = "still";
           }
+
+          $scope.currentstance = $rootScope.players[$scope.player].currentstance;
 
           //if there is an adjustment to the stance apply it
           // $scope.playerImage = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].image;
