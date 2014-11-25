@@ -13,6 +13,11 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
   $scope.activeLoginID = false;
   $scope.activeLoginCode = "";
 
+  document.getElementById("backdrop").style.height= window.innerHeight+"px";
+    window.addEventListener("resize", function(e) {
+      document.getElementById("backdrop").style.height= window.innerHeight+"px";
+    });
+
   //get a list of valid ids
   //todo ping the service
   var users = { '4129187106':
@@ -105,7 +110,7 @@ $rootScope.handleLogin = function($e) {
           //set the default stances
           //get a random default player to use
           var p = Math.floor((Math.random() * $rootScope.themedata.defaultplayer.provideddefaults) + 1)
-          
+
           for(key in $rootScope.themedata.defaultplayer['stances']) {
             if(!$rootScope.players[id]['stances'][key]) {
               $rootScope.players[id]['stances'][key] = jQuery.extend({}, $rootScope.themedata.defaultplayer['stances'][key]);

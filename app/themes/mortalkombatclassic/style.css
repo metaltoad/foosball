@@ -26,15 +26,21 @@ body {
 ************************************************************/
 
 
-.welcome img {
+/*.welcome img {
   width: 100%;
   position: absolute;
+}*/
+
+.intro-background, .welcome-background, .vsbackground {
+  background-size: auto 100%;
+  background-position: 50% 100%;
+  background-repeat: repeat-x;
 }
 
 .playerbox {
   position: relative;
-  padding-top: 40%;
-  left: 15%;
+  top: 65%;
+  text-align: center;
 }
 
 .welcomeplayer {
@@ -107,11 +113,6 @@ body {
 
 .vsbackground {
   background-image: url('images/vs.png');
-  max-width: 1824px;
-  background-repeat:no-repeat;
-  background-size: 100%;
-  min-height: 762px;
-  padding-top: 12%;
 }
 
 .vscontainer {
@@ -127,9 +128,9 @@ body {
 
 .kombatzone {
   text-align: center;
-  clear: both;
-  margin-top: 36.5%;
-  padding-bottom: 31px;
+  position: relative;
+  bottom: -17%;
+  width: 100%;
 }
 
 .avatar {

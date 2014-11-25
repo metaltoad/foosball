@@ -1,22 +1,21 @@
 <link type="text/css" href="/app/themes/{{themes[currentTheme]}}/style.css" rel="stylesheet">
 <div id="backdrop" tabindex="0" class="game-background"  ng-keypress="recordInput($event)">
-  <!--<img src="../themes/mortalkombatclassic/images/arenas/warriorshrine.png">-->
-    <div class="container top-info">
-      <div class="healthbar-container img-left" healthbar="1"></div>
-      <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
-      <div class="healthbar-container health2 img-right" healthbar="2"></div>
+  <div class="container top-info">
+    <div class="healthbar-container img-left" healthbar="1"></div>
+    <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
+    <div class="healthbar-container health2 img-right" healthbar="2"></div>
+  </div>
+  <div class="container">
+    <div id="gamemessage" gamemessage></div>
+  </div>
+  <div class="container containerbox">
+    <div class="player1container img-left">
+        <div taunt="1"></div>
+        <div player="1"></div>
     </div>
-    <div class="container">
-      <div id="gamemessage" gamemessage></div>
+    <div class="player2container img-right">
+        <div taunt="2"></div>
+        <div player="2"></div>
     </div>
-    <div class="container containerbox">
-      <div class="player1container img-left">
-          <div taunt="1"></div>
-          <div player="1"></div>
-      </div>
-      <div class="player2container img-right">
-          <div taunt="2"></div>
-          <div player="2"></div>
-      </div>
-    </div>
+  </div>
 </div>
