@@ -16,7 +16,14 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
   document.getElementById("backdrop").style.height= window.innerHeight+"px";
     window.addEventListener("resize", function(e) {
       document.getElementById("backdrop").style.height= window.innerHeight+"px";
-    });
+  });
+
+  document.getElementById("backdrop2").style.height= window.innerHeight+"px";
+    window.addEventListener("resize", function(e) {
+      document.getElementById("backdrop2").style.height= window.innerHeight+"px";
+  });
+
+  console.log(document.getElementsByClassName("welcomeplayer"));
 
   //get a list of valid ids
   //todo ping the service

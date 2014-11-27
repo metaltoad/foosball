@@ -26,15 +26,21 @@ body {
 ************************************************************/
 
 
-/*.welcome img {
-  width: 100%;
-  position: absolute;
-}*/
+.intro-background {
+  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/title.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/title-repeater.png) repeat-x;
+}
+
+.welcome-background {
+  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/welcome.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/welcome-repeater.png) repeat-x;
+}
+
+.vsbackground {
+  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/vs.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/welcome-repeater.png) repeat-x;
+}
 
 .intro-background, .welcome-background, .vsbackground {
   background-size: auto 100%;
   background-position: 50% 100%;
-  background-repeat: repeat-x;
 }
 
 .playerbox {
@@ -44,7 +50,7 @@ body {
 }
 
 .welcomeplayer {
-  font-size: 2.5em;
+  font-size: 3.0vw;
   color: #efe918;
   text-transform: uppercase;
   text-shadow: 4px 4px 2px #000;
@@ -111,9 +117,6 @@ body {
 
 
 
-.vsbackground {
-  background-image: url('images/vs.png');
-}
 
 .vscontainer {
   width: 100%;
@@ -122,14 +125,25 @@ body {
 .avatarcontainer {
   width: 90%;
   margin: 0 auto;
-  padding: 5.2% 11.7%;
-  min-height: 73.5%;
+  padding-top: 13%;
+}
+
+.avatarcontainer .img-left {
+  position: absolute;
+  left: 19.5%;
+  width: 28%;
+}
+
+.avatarcontainer .img-right {
+  position: absolute;
+  right: 19.5%;
+  width: 28%;
 }
 
 .kombatzone {
   text-align: center;
-  position: relative;
-  bottom: -17%;
+  position: absolute;
+  bottom: 2%;
   width: 100%;
 }
 
@@ -159,7 +173,7 @@ body {
 .locationtext {
   width: 100%;
   color: white;
-  font-size: 2em;
+  font-size: 3vw;
 }
 
 .ng-scope img {
@@ -343,6 +357,9 @@ body {
   .player1container, .player2container {
     zoom: .5;
     bottom: 6%;
+  }
+  .intro-background {
+    background-image: url(http://foosball.dev/app/themes/mortalkombatclassic/images/title-stretched.png);
   }
 }
 
