@@ -35,7 +35,7 @@ body {
 }
 
 .vsbackground {
-  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/vs.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/welcome-repeater.png) repeat-x;
+  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/vs.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/vs-repeater.png) repeat-x;
 }
 
 .intro-background, .welcome-background, .vsbackground {
