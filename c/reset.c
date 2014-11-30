@@ -70,7 +70,7 @@ void snoop_all_windows(Window root, unsigned long type)
 void main(int argc, char **argv)
 {
   int reset = 0;
-  char *resetKey = "i";
+  char *resetKey = "w";
   char *hostname;
   char *string;
   XEvent xev;
