@@ -2,11 +2,11 @@
 
 app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
 
-  var maxUserIdLength = 10;
+  var maxUserIdLength = 14;
   var usersLoggedIn = 0;
-  var guestLogin1key = "n";
-  var guestLogin2key = "m";
-  var cycleThemekey = "v";
+  var guestLogin1key = "[";
+  var guestLogin2key = "'";
+  var cycleThemekey = "-";
   var resetKey = "u";
   $rootScope.currentTheme = 0;
 
@@ -23,22 +23,200 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
       document.getElementById("backdrop2").style.height= window.innerHeight+"px";
   });
 
-  console.log(document.getElementsByClassName("welcomeplayer"));
-
   //get a list of valid ids
   //todo ping the service
-  var users = { '4129187106':
-                  {'name': 'Tom',
-                   'avatar': 'views/images/players/10.jpg',
-                   'player': 'views/images/player1.jpg'},
-                '1':
-                  {'name': 'Matt',
-                   'avatar': 'views/images/players/19.jpg',
-                   'player': 'views/images/player2.jpg'},
-                '2':
-                  {'name': 'Chris',
-                   'avatar': 'views/images/players/13.jpg'},
-              };
+  //here is the temp list till the service is ready
+
+  var users = {
+  '040fa2d2d83881' :
+                  {'name': 'Joaquin',
+                   'avatar': 'views/images/players/1.jpg'
+                  },
+  '0453a2d2d83881' :
+                  {'name': 'Tony R',
+                   'avatar': 'views/images/players/2.jpg'
+                  },
+  '0431a2d2d83881':
+                  {'name': 'Tim W',
+                   'avatar': 'views/images/players/3.jpg'
+                  },
+  '0474a2d2d83881':
+                  {'name': 'Adam E',
+                   'avatar': 'views/images/players/4.jpg'
+                  },
+  '0452a2d2d83881':
+                  {'name': 'Dan L',
+                   'avatar': 'views/images/players/5.jpg'
+                  },
+  '0480a3d2d83881':
+                  {'name': 'Chris T',
+                   'avatar': 'views/images/players/6.jpg'
+                  },
+  '0475a2d2d83881':
+                  {'name': 'Dylan T',
+                   'avatar': 'views/images/players/7.jpg'
+                  },
+  '045da3d2d83881':
+                  {'name': 'Randi K',
+                   'avatar': 'views/images/players/8.jpg'
+                  },
+  '047fa3d2d83881':
+                  {'name': 'Jonathan J',
+                   'avatar': 'views/images/players/9.jpg'
+                  },
+  '043da3d2d83881':
+                  {'name': 'Tom M',
+                   'avatar': 'views/images/players/10.jpg'
+                  },
+  '045ca3d2d83881':
+                  {'name': '',
+                   'avatar': 'views/images/players/11.jpg'
+                  },
+  '041da3d2d83881':
+                  {'name': 'Aubrey F',
+                   'avatar': 'views/images/players/12.jpg'
+                  },
+  '043ca3d2d83881':
+                  {'name': 'Chris S',
+                   'avatar': 'views/images/players/13.jpg'
+                  },
+  '04fda3d2d83880':
+                  {'name': 'Aaron A',
+                   'avatar': 'views/images/players/14.jpg'
+                  },
+  '041ca3d2d83881':
+                  {'name': 'Slavko P',
+                   'avatar': 'views/images/players/15.jpg'
+                  },
+  '04dba3d2d83880':
+                  {'name': 'Nick P',
+                   'avatar': 'views/images/players/16.jpg'
+                  },
+  '04fca3d2d83880':
+                  {'name': 'Corrina',
+                   'avatar': 'views/images/players/17.jpg'
+                  },
+  '04bba3d2d83880':
+                  {'name': 'Tyler W',
+                   'avatar': 'views/images/players/18.jpg'
+                  },
+  '04daa3d2d83880':
+                  {'name': 'Matt P',
+                   'avatar': 'views/images/players/19.jpg'
+                  },
+  '049ba3d2d83880':
+                  {'name': 'Jordan L',
+                   'avatar': 'views/images/players/20.jpg'
+                  },
+  '04baa3d2d83880':
+                  {'name': 'Peter B',
+                   'avatar': 'views/images/players/21.jpg'
+                  },
+  '047ba3d2d83880':
+                  {'name': 'Nathan W',
+                   'avatar': 'views/images/players/22.jpg'
+                  },
+  '049aa3d2d83880':
+                  {'name': 'Steve W',
+                   'avatar': 'views/images/players/23.jpg'
+                  },
+  '045aa3d2d83880':
+                  {'name': 'Ben T',
+                   'avatar': 'views/images/players/24.jpg'
+                  },
+  '047aa3d2d83880':
+                  {'name': 'Jeebak K',
+                   'avatar': 'views/images/players/25.jpg'
+                  },
+  '0438a3d2d83880':
+                  {'name': '',
+                   'avatar': 'views/images/players/26.jpg'
+                  },
+  '0458a3d2d83880':
+                  {'name': 'Jenny O',
+                   'avatar': 'views/images/players/27.jpg'
+                  },
+  '0418a3d2d83880':
+                  {'name': 'Robinson E',
+                   'avatar': 'views/images/players/28.jpg'
+                  },
+  '0439a3d2d83880':
+                  {'name': 'Keith D',
+                   'avatar': 'views/images/players/29.jpg'
+                  },
+  '042aa4d2d83880':
+                  {'name': 'Rhienna',
+                   'avatar': 'views/images/players/30.jpg'
+                  },
+  '04b4a0d2d83880':
+                  {'name': 'Erin N',
+                   'avatar': 'views/images/players/31.jpg'
+                  },
+  '04d5a0d2d83880' :
+                  {'name': 'Aaron K',
+                   'avatar': 'views/images/players/32.jpg'
+                  },
+  '0493a0d2d83880':
+                  {'name': 'Brad K',
+                   'avatar': 'views/images/players/33.jpg'
+                  },
+  '04b3a0d2d83880':
+                  {'name': 'Simeon W',
+                   'avatar': 'views/images/players/34.jpg'
+                  },
+  '0472a0d2d83880':
+                  {'name': 'Mike L',
+                   'avatar': 'views/images/players/35.jpg'
+                  },
+  '0492a0d2d83880':
+                  {'name': 'Paul A',
+                   'avatar': 'views/images/players/36.jpg'
+                  },
+  '0451a0d2d83880':
+                  {'name': 'Darren L',
+                   'avatar': 'views/images/players/37.jpg'
+                  },
+  '0471a0d2d83880':
+                  {'name': 'Cesar J',
+                   'avatar': 'views/images/players/38.jpg'
+                  },
+  '0431a0d2d83880':
+                  {'name': 'Farrah B',
+                   'avatar': 'views/images/players/39.jpg'
+                  },
+  '0452a0d2d83880':
+                  {'name': 'Tony M',
+                   'avatar': 'views/images/players/40.jpg'
+                  },
+  '040fa0d2d83880':
+                  {'name': 'Marcus B',
+                   'avatar': 'views/images/players/41.jpg'
+                  },
+  '0430a0d2d83880' :
+                  {'name': 'Alex L',
+                   'avatar': 'views/images/players/42.jpg'
+                  },
+  '042a9fd2d83880':
+                  {'name': 'Sam I',
+                   'avatar': 'views/images/players/43.jpg'
+                  },
+  '0410a0d2d83880':
+                  {'name': 'Robert L',
+                   'avatar': 'views/images/players/44.jpg'
+                  },
+  '044d9fd2d83880':
+                  {'name': 'Kevin M',
+                   'avatar': 'views/images/players/45.jpg'
+                  },
+  '042b9fd2d83880':
+                  {'name': 'Patrick C',
+                   'avatar': 'views/images/players/46.jpg'
+                  },
+  '046c9fd2d83880':
+                  {'name': 'Nate R',
+                   'avatar': 'views/images/players/47.jpg'
+                  }
+                };
 
 $rootScope.handleLogin = function($e) {
   var key = String.fromCharCode($e.which);
