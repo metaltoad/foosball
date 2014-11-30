@@ -9,44 +9,28 @@
                         "provideddefaults": "5",
                         "stances": {                                                           
                             "still": {
-                                    "image": "still.gif",
-                                    "positionoffsetx": "0",
-                                    "positionoffsety": "0"
+                                    "image": "still.gif"
                             },
                             "score": {
-                                    "image": "score.gif",
-                                    "positionoffsetx": "350",
-                                    "positionoffsety": "0"
+                                    "image": "score.gif"
                             },
                             "finishthem": {
-                                    "image": "finishthem.gif",
-                                    "positionoffsetx": "0",
-                                    "positionoffsety": "0"
+                                    "image": "finishthem.gif"
                             },
                             "scoredon": {
-                                    "image": "scoredon.gif",
-                                    "positionoffsetx": "350",
-                                    "positionoffsety": "0"
+                                    "image": "scoredon.gif"
                             },                                
                             "skunkedon": {
-                                    "image": "lost.gif",
-                                    "positionoffsetx": "0",
-                                    "positionoffsety": "0"
+                                    "image": "lost.gif"
                             },
                             "skunked": {
-                                    "image": "won.gif",
-                                    "positionoffsetx": "0",
-                                    "positionoffsety": "0"
+                                    "image": "won.gif"
                             },
                             "won":{
-                                    "image": "won.gif",
-                                    "positionoffsetx": "0",
-                                    "positionoffsety": "0"
+                                    "image": "won.gif"
                             },
                             "lost":{
-                                    "image": "lost.gif",
-                                    "positionoffsetx": "0",
-                                    "positionoffsety": "0"
+                                    "image": "lost.gif"
                             }
                         },
                         "taunts" : {                                
