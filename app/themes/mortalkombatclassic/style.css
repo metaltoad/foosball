@@ -27,15 +27,15 @@ body {
 
 
 .intro-background {
-  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/title.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/title-repeater.png) repeat-x;
+  background: url(/app/themes/mortalkombatclassic/images/title.png) center no-repeat, url(/app/themes/mortalkombatclassic/images/title-repeater.png) repeat-x;
 }
 
 .welcome-background {
-  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/welcome.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/welcome-repeater.png) repeat-x;
+  background: url(/app/themes/mortalkombatclassic/images/welcome.png) center no-repeat, url(/app/themes/mortalkombatclassic/images/welcome-repeater.png) repeat-x;
 }
 
 .vsbackground {
-  background: url(http://foosball.dev/app/themes/mortalkombatclassic/images/vs.png) center no-repeat, url(http://foosball.dev/app/themes/mortalkombatclassic/images/vs-repeater.png) repeat-x;
+  background: url(/app/themes/mortalkombatclassic/images/vs.png) center no-repeat, url(/app/themes/mortalkombatclassic/images/vs-repeater.png) repeat-x;
 }
 
 .intro-background, .welcome-background, .vsbackground {
@@ -359,7 +359,7 @@ body {
     bottom: 6%;
   }
   .intro-background {
-    background-image: url(http://foosball.dev/app/themes/mortalkombatclassic/images/title-stretched.png);
+    background-image: url(/app/themes/mortalkombatclassic/images/title-stretched.png);
   }
 }
 
