@@ -3,7 +3,7 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
   var player1ForceKey = "";
   var player2ForceKey = "";
 
-  var player1ScoreKey = "1";
+  var player1ScoreKey = "j";
   var player2ScoreKey = "b";
   var scoreTimeout = 2000;
   $scope.scoreInterval = false;
