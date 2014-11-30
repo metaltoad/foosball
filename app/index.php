@@ -48,6 +48,16 @@
         <script src="scripts/directives/vs/vs-location.js"></script>
         <script src="scripts/services/gamemessages.js"></script>
         <script src="scripts/directives/game/taunt.js"></script>
+
+        <?php
+        if($_SESSION['remote_addr']) {
+        ?>
+        <input type="hidden" id="viewonly" value="true">
+
+        <?php
+        }
+        ?>
+
     </body>
 </html>
 

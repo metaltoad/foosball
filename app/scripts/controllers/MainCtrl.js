@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $rootScope, gamemessages, $location) {
+app.controller('MainCtrl', function($http, $scope, $routeParams, $timeout, $interval, $rootScope, gamemessages, $location) {
 
   var player1ForceKey = "";
   var player2ForceKey = "";
@@ -10,6 +10,90 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
 
   if(!$rootScope.players) {
     $location.url("/vs");
+  }
+
+  if($rootScope.viewonly) {
+    //set a timer to keep the view updated
+    $interval(function() {$rootScope.getSession();}, 5000);
+  }
+
+  $scope.updateSession = function() {
+
+    if(!$rootScope.viewonly) {
+      var yellowscore = null;
+      var blackscore = null;
+      var player3 = null;
+      var player4 = null;
+
+      $rootScope.themedata['currentBackground'] = $rootScope.background;
+
+      //check the type of scoring this theme uses and set the scoreing
+      if($rootScope.themedata.scoretype == "healthbar") {
+       if(!$rootScope.players[1].health) {
+          blackscore = 0;
+        }
+        else {
+          blackscore =  5 - $rootScope.players[1].health;
+        }
+        if(!$rootScope.players[1].health) {
+          yellowscore = 0;
+        }
+        else {
+          yellowscore = 5 - $rootScope.players[2].health;
+        }
+      }
+      else {
+        if(!$rootScope.players[1].score) {
+          blackscore = 0;
+        }
+        else {
+          blackscore = $rootScope.players[1].score;
+        }
+
+        if(!$rootScope.players[2].score) {
+          yellowscore = 0;
+        }
+        else {
+          yellowscore = $rootScope.players[2].score;
+        }
+      }
+
+      if($rootScope.players[3]) {
+        player3 = $rootScope.players[3].id;
+      }
+
+      if($rootScope.players[4]) {
+        player4 = $rootScope.players[4].id;
+      }
+
+      var req = {
+        method: 'POST',
+        url: '/app/session.php',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;'
+        },
+        data: {
+          key: 'jlkjdsv7809304hjhjaef3$98fddfg',
+          player1: $rootScope.players[1].id,
+          player2: $rootScope.players[2].id,
+          player3 : player3,
+          player4 : player4,
+          yellowscore: yellowscore,
+          blackscore: blackscore,
+          gametime: 0,
+          currentTheme: $rootScope.currentTheme,
+          themedata: $rootScope.themedata,
+          player1data: $rootScope.players[1],
+          player2data: $rootScope.players[2]
+        },
+      }
+
+      //update the session
+      $http(req).
+        success(function(data, status, headers, config) {
+
+        });
+    }
   }
 
   $scope.newGame = function() {
@@ -36,8 +120,10 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
     $rootScope.players[1].currentstance = "still";
     $rootScope.players[2].currentstance = "still";
 
-    //show the ready message
-    gamemessages.showMessage("matchstart");
+    if(!$rootScope.viewonly) {
+      //show the ready message
+      gamemessages.showMessage("matchstart");
+    }
   }
 
   $rootScope.handleFightInput = function($e, key) {
@@ -136,6 +222,9 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
       }
     }
 
+    //save the score
+    $scope.updateSession();
+
     //start the score timeout
     $timeout(function() {
       $scope.scoreInterval = false;
@@ -210,4 +299,5 @@ app.controller('MainCtrl', function($scope, $routeParams, $timeout, $interval, $
   }
 
   $scope.newGame();
+  $scope.updateSession();
 });

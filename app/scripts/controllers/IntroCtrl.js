@@ -13,21 +13,66 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
   $scope.activeLoginID = false;
   $scope.activeLoginCode = "";
 
-  document.getElementById("backdrop").style.height= window.innerHeight+"px";
-    window.addEventListener("resize", function(e) {
-      document.getElementById("backdrop").style.height= window.innerHeight+"px";
-  });
+  $rootScope.getSession = function() {
+    //load up the current session data
+    $http.get('/app/session.php?key=jlkjdsv7809304hjhjaef3$98fddfg').
+      success(function(data, status, headers, config) {
 
-  document.getElementById("backdrop2").style.height= window.innerHeight+"px";
-    window.addEventListener("resize", function(e) {
-      document.getElementById("backdrop2").style.height= window.innerHeight+"px";
-  });
+        if(data.player1 == null) {
+          $scope.nosession = true;
+        }
+        else {
+          $rootScope.viewonly = true;
+          $rootScope.players = [];
+//          $rootScope.players[1] = {};
+//          $rootScope.players[2] = {};
+//
+//          $rootScope.players[1].id = data.player1;
+//          $rootScope.players[2].id = data.player2;
+//
+//          $rootScope.players[1].name = users[data.player1].name;
+//          $rootScope.players[2].name = users[data.player2].name;
 
-  //get a list of valid ids
+          $rootScope.currentTheme = data.currentTheme;
+          $rootScope.themedata = data.themedata;
+          $rootScope.players[1] = data.player1data;
+          $rootScope.players[2] = data.player2data;
+
+          $rootScope.background = data.themedata.currentBackground;
+
+          if($rootScope.themedata.scoretype == "healthbar") {
+            $rootScope.players[1].health = 5 - data.yellowscore;
+            $rootScope.players[2].health = 5 - data.blackscore;
+          }
+          else {
+            $rootScope.players[1].health = data.blackscore;
+            $rootScope.players[2].health = data.yellowscore;
+          }
+
+//          $http.get('/app/themes/' + $rootScope.themes[$rootScope.currentTheme] + '/settings.json').
+//            success(function(data, status, headers, config) {
+//              $rootScope.themedata = data;
+//            });
+
+          //set the url to the game
+          $location.url("/game");
+        }
+      });
+  }
+
+//get a list of valid ids
   //todo ping the service
   //here is the temp list till the service is ready
 
-  var users = {
+  $rootScope.users = {
+  '1' :
+                  {'name': 'Joaquin',
+                   'avatar': 'views/images/players/1.jpg'
+                  },
+  '2' :
+                  {'name': 'Tony',
+                   'avatar': 'views/images/players/2.jpg'
+                  },
   '040fa2d2d83881' :
                   {'name': 'Joaquin',
                    'avatar': 'views/images/players/1.jpg'
@@ -218,6 +263,22 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
                   }
                 };
 
+  if(document.getElementById("viewonly")) {
+    $rootScope.getSession();
+  }
+
+  document.getElementById("backdrop").style.height= window.innerHeight+"px";
+    window.addEventListener("resize", function(e) {
+      document.getElementById("backdrop").style.height= window.innerHeight+"px";
+  });
+
+  document.getElementById("backdrop2").style.height= window.innerHeight+"px";
+    window.addEventListener("resize", function(e) {
+      document.getElementById("backdrop2").style.height= window.innerHeight+"px";
+  });
+
+
+
 $rootScope.handleLogin = function($e) {
   var key = String.fromCharCode($e.which);
   if(!$scope.activeLoginID) {
@@ -227,8 +288,9 @@ $rootScope.handleLogin = function($e) {
     //record the id input
     $scope.activeLoginCode += key;
 
-    if($scope.activeLoginCode in users) {
-      $rootScope.players[$scope.activeLoginID] = users[$scope.activeLoginCode];
+    if($scope.activeLoginCode in $rootScope.users) {
+      $rootScope.players[$scope.activeLoginID] = $rootScope.users[$scope.activeLoginCode];
+      $rootScope.players[$scope.activeLoginID].id = $scope.activeLoginCode;
       $scope.activeLoginID = false;
       $scope.activeLoginCode = "";
     }

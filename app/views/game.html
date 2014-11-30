@@ -2,7 +2,7 @@
 <div id="backdrop" tabindex="0" class="game-background"  ng-keypress="recordInput($event)">
   <div class="container top-info">
     <div class="healthbar-container img-left" healthbar="1"></div>
-    <timer class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
+    <timer ng-hide="viewonly" class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
     <div class="healthbar-container health2 img-right" healthbar="2"></div>
   </div>
   <div class="container">

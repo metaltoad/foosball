@@ -12,3 +12,8 @@
   position: absolute;
 }
 
+.nosession-background {
+  background: url(/app/views/images/nogame.png) center no-repeat, url(/app/views/images/ngame.png) repeat-x;
+    height: 600px;
+    background-size: auto 100%;
+}

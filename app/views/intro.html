@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="themes/{{themes[currentTheme]}}/style.css">
-
-    <div ng-hide="players[1].name || players[2].name" id="backdrop" class="intro-background"></div>
+    <div ng-show="nosession" class="nosession-background"></div>
+    <div ng-hide="nosession || players[1].name || players[2].name" id="backdrop" class="intro-background"></div>
     <div ng-show="players[1].name || players[2].name" id="backdrop2" class="welcome-background">
       <!--- these should display in that box somehow use the style.css from this game theme for this not the main one-->
       <div class="playerbox">
@@ -8,5 +8,3 @@
         <div class="welcomeplayer" ng-show="players[2].name">Yellow Player: {{players[2].name}} Accepted!</div>
       </div>
       </div>
-
-  </div>
