@@ -73,191 +73,191 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
                   {'name': 'Tony',
                    'avatar': 'views/images/players/2.jpg'
                   },
-  '040fa2d2d83881' :
+  '4151622102' :
                   {'name': 'Joaquin',
                    'avatar': 'views/images/players/1.jpg'
                   },
-  '0453a2d2d83881' :
+  '4831622102' :
                   {'name': 'Tony R',
                    'avatar': 'views/images/players/2.jpg'
                   },
-  '0431a2d2d83881':
+  '4491622102':
                   {'name': 'Tim W',
                    'avatar': 'views/images/players/3.jpg'
                   },
-  '0474a2d2d83881':
+  '4116162210':
                   {'name': 'Adam E',
                    'avatar': 'views/images/players/4.jpg'
                   },
-  '0452a2d2d83881':
+  '4821622102':
                   {'name': 'Dan L',
                    'avatar': 'views/images/players/5.jpg'
                   },
-  '0480a3d2d83881':
+  '4128163210':
                   {'name': 'Chris T',
                    'avatar': 'views/images/players/6.jpg'
                   },
-  '0475a2d2d83881':
+  '4117162210':
                   {'name': 'Dylan T',
                    'avatar': 'views/images/players/7.jpg'
                   },
-  '045da3d2d83881':
+  '4931632102':
                   {'name': 'Randi K',
                    'avatar': 'views/images/players/8.jpg'
                   },
-  '047fa3d2d83881':
+  '4127163210':
                   {'name': 'Jonathan J',
                    'avatar': 'views/images/players/9.jpg'
                   },
-  '043da3d2d83881':
+  '4611632102':
                   {'name': 'Tom M',
                    'avatar': 'views/images/players/10.jpg'
                   },
-  '045ca3d2d83881':
+  '4921632102':
                   {'name': '',
                    'avatar': 'views/images/players/11.jpg'
                   },
-  '041da3d2d83881':
+  '4291632102':
                   {'name': 'Aubrey F',
                    'avatar': 'views/images/players/12.jpg'
                   },
-  '043ca3d2d83881':
+  '4601632102':
                   {'name': 'Chris S',
                    'avatar': 'views/images/players/13.jpg'
                   },
-  '04fda3d2d83880':
+  '4253163210':
                   {'name': 'Aaron A',
                    'avatar': 'views/images/players/14.jpg'
                   },
-  '041ca3d2d83881':
+  '4281632102':
                   {'name': 'Slavko P',
                    'avatar': 'views/images/players/15.jpg'
                   },
-  '04dba3d2d83880':
+  '4219163210':
                   {'name': 'Nick P',
                    'avatar': 'views/images/players/16.jpg'
                   },
-  '04fca3d2d83880':
+  '4252163210':
                   {'name': 'Corrina',
                    'avatar': 'views/images/players/17.jpg'
                   },
-  '04bba3d2d83880':
+  '4187163210':
                   {'name': 'Tyler W',
                    'avatar': 'views/images/players/18.jpg'
                   },
-  '04daa3d2d83880':
+  '4218163210':
                   {'name': 'Matt P',
                    'avatar': 'views/images/players/19.jpg'
                   },
-  '049ba3d2d83880':
+  '4155163210':
                   {'name': 'Jordan L',
                    'avatar': 'views/images/players/20.jpg'
                   },
-  '04baa3d2d83880':
+  '4186163210':
                   {'name': 'Peter B',
                    'avatar': 'views/images/players/21.jpg'
                   },
-  '047ba3d2d83880':
+  '4123163210':
                   {'name': 'Nathan W',
                    'avatar': 'views/images/players/22.jpg'
                   },
-  '049aa3d2d83880':
+  '4154163210':
                   {'name': 'Steve W',
                    'avatar': 'views/images/players/23.jpg'
                   },
-  '045aa3d2d83880':
+  '4901632102':
                   {'name': 'Ben T',
                    'avatar': 'views/images/players/24.jpg'
                   },
-  '047aa3d2d83880':
+  '4122163210':
                   {'name': 'Jeebak K',
                    'avatar': 'views/images/players/25.jpg'
                   },
-  '0438a3d2d83880':
+  '4561632102':
                   {'name': '',
                    'avatar': 'views/images/players/26.jpg'
                   },
-  '0458a3d2d83880':
+  '4881632102':
                   {'name': 'Jenny O',
                    'avatar': 'views/images/players/27.jpg'
                   },
-  '0418a3d2d83880':
+  '4241632102':
                   {'name': 'Robinson E',
                    'avatar': 'views/images/players/28.jpg'
                   },
-  '0439a3d2d83880':
+  '4571632102':
                   {'name': 'Keith D',
                    'avatar': 'views/images/players/29.jpg'
                   },
-  '042aa4d2d83880':
+  '4421642102':
                   {'name': 'Rhienna',
                    'avatar': 'views/images/players/30.jpg'
                   },
-  '04b4a0d2d83880':
+  '4180160210':
                   {'name': 'Erin N',
                    'avatar': 'views/images/players/31.jpg'
                   },
-  '04d5a0d2d83880' :
+  '4213160210' :
                   {'name': 'Aaron K',
                    'avatar': 'views/images/players/32.jpg'
                   },
-  '0493a0d2d83880':
+  '4147160210':
                   {'name': 'Brad K',
                    'avatar': 'views/images/players/33.jpg'
                   },
-  '04b3a0d2d83880':
+  '4179160210':
                   {'name': 'Simeon W',
                    'avatar': 'views/images/players/34.jpg'
                   },
-  '0472a0d2d83880':
+  '4114160210':
                   {'name': 'Mike L',
                    'avatar': 'views/images/players/35.jpg'
                   },
-  '0492a0d2d83880':
+  '4146160210':
                   {'name': 'Paul A',
                    'avatar': 'views/images/players/36.jpg'
                   },
-  '0451a0d2d83880':
+  '4811602102':
                   {'name': 'Darren L',
                    'avatar': 'views/images/players/37.jpg'
                   },
-  '0471a0d2d83880':
+  '4113160210':
                   {'name': 'Cesar J',
                    'avatar': 'views/images/players/38.jpg'
                   },
-  '0431a0d2d83880':
+  '4491602102':
                   {'name': 'Farrah B',
                    'avatar': 'views/images/players/39.jpg'
                   },
-  '0452a0d2d83880':
+  '4821602102':
                   {'name': 'Tony M',
                    'avatar': 'views/images/players/40.jpg'
                   },
-  '040fa0d2d83880':
+  '4151602102':
                   {'name': 'Marcus B',
                    'avatar': 'views/images/players/41.jpg'
                   },
-  '0430a0d2d83880' :
+  '4481602102' :
                   {'name': 'Alex L',
                    'avatar': 'views/images/players/42.jpg'
                   },
-  '042a9fd2d83880':
+  '4421592102':
                   {'name': 'Sam I',
                    'avatar': 'views/images/players/43.jpg'
                   },
-  '0410a0d2d83880':
+  '4161602102':
                   {'name': 'Robert L',
                    'avatar': 'views/images/players/44.jpg'
                   },
-  '044d9fd2d83880':
+  '4771592102':
                   {'name': 'Kevin M',
                    'avatar': 'views/images/players/45.jpg'
                   },
-  '042b9fd2d83880':
+  '4431592102':
                   {'name': 'Patrick C',
                    'avatar': 'views/images/players/46.jpg'
                   },
-  '046c9fd2d83880':
+  '4108159210':
                   {'name': 'Nate R',
                    'avatar': 'views/images/players/47.jpg'
                   }
