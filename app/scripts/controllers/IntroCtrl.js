@@ -65,14 +65,6 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
   //here is the temp list till the service is ready
 
   $rootScope.users = {
-  '1' :
-                  {'name': 'Joaquin',
-                   'avatar': 'views/images/players/1.jpg'
-                  },
-  '2' :
-                  {'name': 'Tony',
-                   'avatar': 'views/images/players/2.jpg'
-                  },
   '4151622102' :
                   {'name': 'Joaquin',
                    'avatar': 'views/images/players/1.jpg'

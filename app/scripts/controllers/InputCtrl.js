@@ -6,6 +6,15 @@ $scope.recordInput = function($e) {
 
   var key = String.fromCharCode($e.which);
 
+  //some keys are universal so allow them to be used here
+  switch(key) {
+    case "r": {
+        //send back to the login
+        $location.url("/");
+        break;
+      }
+  }
+
   switch($route.current.originalPath) {
     case "/vs": {
         $rootScope.handleVSInput($e, key);
