@@ -49,14 +49,16 @@ body {
   text-align: center;
 }
 
-.welcomeplayer {
-  font-size: 3.0vw;
-  color: #efe918;
+.welcomeplayer, .locationtext  {
+  font-size: 5vmin;
+  /*color: #efe918;*/
+  color: #F15F22;
+  font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
   text-shadow: 4px 4px 2px #000;
-  font-family: Impact, Charcoal, sans-serif;
+  /*font-family: Impact, Charcoal, sans-serif;*/
   letter-spacing: 2px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .playername {
@@ -116,28 +118,31 @@ body {
 ******************************/
 
 
+.top-block {
+  display: block;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 3%;
+}
 
+.top-container {
+  display: block;
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 3%;
+}
 
 .vscontainer {
   width: 100%;
 }
 
 .avatarcontainer {
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 13%;
+  width: 100%;
+  text-align: center;
 }
 
-.avatarcontainer .img-left {
-  position: absolute;
-  left: 19.5%;
-  width: 28%;
-}
-
-.avatarcontainer .img-right {
-  position: absolute;
-  right: 19.5%;
-  width: 28%;
+.avatarcontainer img {
+  width: 2vw;
 }
 
 .kombatzone {
@@ -149,7 +154,8 @@ body {
 
 .avatar {
   display: inline-block;
-  width: 40%;
+  width: 35%;
+  margin: 0 4%;
 }
 
 .img-right {
@@ -170,11 +176,12 @@ body {
   margin-top: -150px;
 }
 
-.locationtext {
+/*.locationtext {
   width: 100%;
-  color: white;
+  color: #F15F22;
+  font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 3vw;
-}
+}*/
 
 .ng-scope img {
   width: 100%;
@@ -339,17 +346,42 @@ body {
 }
 
 
-@media (min-height: 901px) {
+@media (max-height: 984px) {
   .player1container, .player2container {
     zoom: 1.2;
     bottom: 6%;
   }
+  .avatar {
+    display: inline-block;
+    width: 27%;
+    margin: 0 3%;
+  }
+  .top-block {
+    margin-bottom: 5%;
+  }
 }
+
+/*@media (min-height: 901px) {
+  .player1container, .player2container {
+    zoom: 1.2;
+    bottom: 6%;
+  }
+  .avatar {
+    display: inline-block;
+    width: 27%;
+    margin: 0 3%;
+  }
+}*/
 
 @media (max-height: 600px) {
   .player1container, .player2container {
     zoom: .9;
     bottom: 6%;
+  }
+  .avatar {
+    display: inline-block;
+    width: 26%;
+    margin: 0 2%;
   }
 }
 
@@ -361,12 +393,35 @@ body {
   .intro-background {
     background-image: url(/app/themes/mortalkombatclassic/images/title-stretched.png);
   }
+  .playerbox {
+    top: 66%;
+  }
+  .playerbox .welcomeplayer {
+    font-size: 4vh;
+  }
+  .avatar {
+    display: inline-block;
+    width: 23%;
+    margin: 0 2%;
+  }
 }
 
 @media (max-height: 250px) {
   .player1container, .player2container {
     zoom: .2;
     bottom: 6%;
+  }
+  .playerbox {
+    top: 67%;
+  }
+  .playerbox .welcomeplayer {
+    font-size: 4vh;
+    padding: 5px;
+  }
+  .avatar {
+    display: inline-block;
+    width: 30%;
+    margin: 0 2%;
   }
 }
 
