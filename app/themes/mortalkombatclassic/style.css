@@ -79,7 +79,7 @@ body {
 }
 
 .healthbar-container {
-  width: 30%;
+  width: 80%;
   display: inline-block;
 }
 
@@ -97,7 +97,7 @@ body {
   color: red;
   font-family: fantasy;
   margin: auto;
-  display: inline-block;
+  display: inline;
   width: 40%;
 }
 
@@ -204,10 +204,26 @@ body {
 
 .top-info {
   padding-top: 3%;
+  text-align: center;
 }
 
 .healthbar-container {
   display: inline-block;
+}
+
+.avatar-health {
+  display: inline;
+}
+
+.avatar.thumb {
+  border: 2px solid black;
+  border-radius: 100px;
+  overflow: hidden;
+  width: 10%;
+}
+
+.avatar-health img {
+
 }
 
 .gifcontainer {
@@ -373,12 +389,27 @@ body {
   }
 }*/
 
+@media (min-height: 1080px) {
+  .player1container, .player2container {
+    zoom: .9;
+    bottom: 6%;
+  }
+  .vsbackground .avatar {
+    display: inline-block;
+    width: 28%;
+    margin: 0 3%;
+  }
+  .top-block {
+    margin-bottom: 5.5%;
+  }
+}
+
 @media (max-height: 600px) {
   .player1container, .player2container {
     zoom: .9;
     bottom: 6%;
   }
-  .avatar {
+  .vsbackground .avatar {
     display: inline-block;
     width: 26%;
     margin: 0 2%;
@@ -399,7 +430,7 @@ body {
   .playerbox .welcomeplayer {
     font-size: 4vh;
   }
-  .avatar {
+  .vsbackground .avatar {
     display: inline-block;
     width: 23%;
     margin: 0 2%;
@@ -418,7 +449,7 @@ body {
     font-size: 4vh;
     padding: 5px;
   }
-  .avatar {
+  .vsbackground .avatar {
     display: inline-block;
     width: 30%;
     margin: 0 2%;

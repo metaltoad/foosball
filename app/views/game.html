@@ -1,10 +1,29 @@
 <link type="text/css" href="/app/themes/{{themes[currentTheme]}}/style.css" rel="stylesheet">
 <div id="backdrop" tabindex="0" class="game-background"  ng-keypress="recordInput($event)">
-  <div class="container top-info">
-    <div class="healthbar-container img-left" healthbar="1"></div>
+  <div class= "top-info">
+
+    <div class="avatar-health img-left">
+
+      <div class="avatar thumb">
+        <div class="vsavatar vs1" vsavatar="1"></div>
+      </div>
+      <div class="healthbar-container" healthbar="1"></div>
+
+    </div>
+
     <timer ng-hide="viewonly" class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
-    <div class="healthbar-container health2 img-right" healthbar="2"></div>
+
+    <div class="avatar-health img-right">
+
+      <div class="healthbar-container health2 img-left" healthbar="2"></div>
+      <div class="avatar thumb">
+        <div class="vsavatar vs2" vsavatar="2"></div>
+      </div>
+
+    </div>
+
   </div>
+
   <div class="container">
     <div id="gamemessage" gamemessage></div>
   </div>
