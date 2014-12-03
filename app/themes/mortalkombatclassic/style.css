@@ -183,6 +183,7 @@
 
 .avatar-health {
   display: inline-flex;
+  width: 30%;
 }
 
 .avatar-health.left.img-left .playername,
@@ -214,11 +215,11 @@
   margin: auto;
 }
 
-div#health2 {
+/*div#health2 {
   float: right;
 }
 
-/*.gifcontainer {
+.gifcontainer {
   position: relative;
   padding: 0 10%;
   margin-top: 27%;
@@ -363,8 +364,10 @@ div#health2 {
 
 @media (min-height: 1080px) {
   .player1container, .player2container {
-    zoom: .9;
-    bottom: 6%;
+    zoom: 1.5;
+  }
+  .containerbox {
+    bottom: 0;
   }
   .vsbackground .avatar {
     display: inline-block;
@@ -388,6 +391,9 @@ div#health2 {
   }
   .top-block {
     margin-bottom: 5%;
+  }
+  .avatar.thumb {
+    width: 35%;
   }
 }
 

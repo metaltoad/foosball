@@ -30,7 +30,7 @@ app.service('gamemessages', ['$timeout', '$rootScope', function($timeout, $rootS
     else {
       //pick a random spot to show the taunt and then set the message there
       document.getElementById("gamemessage").style.position = "absolute";
-      var randtop = Math.floor((Math.random() * 100));
+      var randtop = Math.floor((Math.random() * 400));
       var randleft = Math.floor((Math.random() * 400 + 300));
       document.getElementById("gamemessage").style.top = randtop + "px";
       document.getElementById("gamemessage").style.left = randleft + "px";
@@ -52,7 +52,7 @@ app.service('gamemessages', ['$timeout', '$rootScope', function($timeout, $rootS
     else {
       //pick a random spot to show the taunt and then set the message there
       document.getElementById("gamemessage").style.position = "absolute";
-      var randtop = Math.floor((Math.random() * 100));
+      var randtop = Math.floor((Math.random() * 400));
       var randleft = Math.floor((Math.random() * 400 + 300));
       document.getElementById("gamemessage").style.top = randtop + "px";
       document.getElementById("gamemessage").style.left = randleft + "px";
