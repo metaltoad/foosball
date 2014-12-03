@@ -54,8 +54,8 @@ app.service('gamemessages', ['$timeout', '$rootScope', function($timeout, $rootS
       document.getElementById("gamemessage").style.position = "absolute";
       var randtop = Math.floor((Math.random() * 400));
       var randleft = Math.floor((Math.random() * 400 + 300));
-      document.getElementById("gamemessage").style.top = randtop + "px";
-      document.getElementById("gamemessage").style.left = randleft + "px";
+      //document.getElementById("gamemessage").style.top = randtop + "px";
+      //document.getElementById("gamemessage").style.left = randleft + "px";
     }
 
     $rootScope.gamemessagetext = $rootScope.themedata.messages[messageid].text[index];

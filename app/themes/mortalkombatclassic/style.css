@@ -241,6 +241,10 @@
   width: 45%;
 }
 
+.player1container .taunt, .player2container .taunt {
+  top: 40px;
+}
+
 .player2container {
   margin-right: 5%;
   width: 45%;
@@ -364,7 +368,7 @@
 
 @media (min-height: 1080px) {
   .player1container, .player2container {
-    zoom: 1.5;
+    zoom: 1.7;
   }
   .containerbox {
     bottom: 0;
@@ -381,8 +385,11 @@
 
 @media (max-height: 984px) {
   .player1container, .player2container {
-    zoom: 1.2;
+    zoom: 1.7;
     bottom: 6%;
+  }
+  .containerbox {
+    bottom: 0;
   }
   .avatar {
     display: inline-block;
@@ -399,8 +406,7 @@
 
 @media (max-height: 600px) {
   .player1container, .player2container {
-    zoom: .9;
-    bottom: 6%;
+    zoom: 1.4;
   }
   .vsbackground .avatar {
     display: inline-block;
@@ -412,7 +418,6 @@
 @media (max-height: 400px) {
   .player1container, .player2container {
     zoom: .5;
-    bottom: 6%;
   }
   .intro-background {
     background-image: url(/app/themes/mortalkombatclassic/images/title-stretched.png);
