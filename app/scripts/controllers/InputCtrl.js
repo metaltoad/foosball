@@ -8,7 +8,7 @@ $scope.recordInput = function($e) {
 
   //some keys are universal so allow them to be used here
   switch(key) {
-    case "r": {
+    case "w": {
         //send back to the login
         $location.url("/");
         break;
