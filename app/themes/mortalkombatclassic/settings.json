@@ -3,11 +3,11 @@
     "themebackground": "title.png",
     "vsbackground": "vs.png",
     "graphicstype": "provided",
-    "defaultplayer" : {                  
+    "defaultplayer" : {
                         "name": "Player",
-                        "vsavatar": "guestavatar.jpg",                                                
-                        "provideddefaults": "5",
-                        "stances": {                                                           
+                        "vsavatar": "guestavatar.jpg",
+                        "provideddefaults": "8",
+                        "stances": {
                             "still": {
                                     "image": "still.gif"
                             },
@@ -19,7 +19,7 @@
                             },
                             "scoredon": {
                                     "image": "scoredon.gif"
-                            },                                
+                            },
                             "skunkedon": {
                                     "image": "lost.gif"
                             },
@@ -33,7 +33,7 @@
                                     "image": "lost.gif"
                             }
                         },
-                        "taunts" : {                                
+                        "taunts" : {
                             "score": {
                                 "text": ["Take that!", "Bamn!"],
                                 "timeout": "2000"
@@ -45,11 +45,11 @@
                             "scoredon": {
                                 "text": "I'll get you!",
                                 "timeout": "2000"
-                            },                                
+                            },
                             "skunked":  {
                                 "text": "",
                                 "timeout": "2000"
-                            },                                
+                            },
                             "skunkedon":  {
                                 "text": "",
                                 "timeout": "2000"
@@ -83,10 +83,10 @@
                                 "timeout": "2000"
                             }
                         }
-                    },                                    
-    "winningscore": "5",            
-    "scoretype": "healthbar",    
-    "messages" : {        
+                    },
+    "winningscore": "5",
+    "scoretype": "healthbar",
+    "messages" : {
         "matchstart" : {
             "text": [ "Ready!", "Fight!!"],
             "timeout": "2000",
@@ -98,7 +98,7 @@
             "timeout": "2000",
             "position": "floating",
             "type": "random"
-        },                
+        },
         "skunked": {
             "text": "Flawless Victory!",
             "timeout": "4000",
@@ -139,7 +139,7 @@
                         "name": "Warrior Shrine",
                         "background": "arenas/warriorshrine.png"
                     }
-                    
-                    
+
+
     }
 }
