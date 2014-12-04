@@ -331,6 +331,10 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
       document.getElementById("backdrop2").style.height= window.innerHeight+"px";
   });
 
+function stringIsNumber(s) {
+    var x = +s; // made cast obvious for demonstration
+    return x.toString() === s;
+}
 
 
 $rootScope.handleLogin = function($e) {
@@ -375,7 +379,7 @@ $rootScope.handleLogin = function($e) {
     $scope.activeLoginID = false;
   }
   else {
-    if(angular.isNumber(key)) {
+    if(stringIsNumber(key)) {
 
       //the first digit in a key is always 4, if the first digit isnt invalidate it so it can try again
       if($scope.activeLoginCode == "" && key != "4") {
