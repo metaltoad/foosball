@@ -41,7 +41,7 @@ void prepend(char* s, const char* t) {
 }
 
 static void
-get_uid(const uint8_t *pbtData, const size_t szBytes, char num)
+get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num)
 {
     size_t  szPos;
     char buf[50];

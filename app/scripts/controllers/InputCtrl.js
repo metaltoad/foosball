@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('InputCtrl', function($scope, $route, $rootScope) {
+app.controller('InputCtrl', function($scope, $route, $rootScope, $location) {
 
 $scope.recordInput = function($e) {
 
@@ -8,8 +8,9 @@ $scope.recordInput = function($e) {
 
   //some keys are universal so allow them to be used here
   switch(key) {
-    case "r": {
+    case "w": {
         //send back to the login
+        $rootScope.players = [];
         $location.url("/");
         break;
       }
