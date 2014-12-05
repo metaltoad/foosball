@@ -369,7 +369,7 @@
 
 @media (min-height: 1080px) {
   .player1container, .player2container {
-    zoom: 1.7;
+    zoom: 3;
   }
   .containerbox {
     bottom: 0;
@@ -386,7 +386,7 @@
 
 @media (max-height: 984px) {
   .player1container, .player2container {
-    zoom: 1.7;
+    zoom: 3;
     bottom: 6%;
   }
   .containerbox {
