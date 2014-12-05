@@ -65,20 +65,6 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
   //here is the temp list till the service is ready
 
   $rootScope.users = {
-  '1' :
-                  {'name': 'Joaquin',
-                   'avatar': 'views/images/players/1.jpg',
-                   'vs': 'views/images/players/1.jpg',
-                   'gfx': false,
-                   'idx': 1
-                  },
-  '2' :
-                  {'name': 'Tony',
-                   'avatar': 'views/images/players/2.jpg',
-                   'vs': 'views/images/players/2.jpg',
-                   'gfx': false,
-                   'idx': 2
-                  },
   '4151622102' :
                   {'name': 'Joaquin',
                    'avatar': 'views/images/players/1.jpg',
@@ -345,7 +331,7 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
                    'gfx': false,
                    'idx': 37
                   },
-  '4113160210':
+  '4129187106':
                   {'name': 'Cesar J',
                    'avatar': 'views/images/players/38/avatar.jpg',
                    'vs': 'views/images/players/38/vs.png',
