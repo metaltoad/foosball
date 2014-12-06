@@ -384,7 +384,7 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
                   {'name': 'Kevin M',
                    'avatar': 'views/images/players/45/avatar.jpg',
                    'vs': 'views/images/players/45/vs.png',
-                   'gfx': false,
+                   'gfx': true,
                    'idx': 45
                   },
   '4431592102':
