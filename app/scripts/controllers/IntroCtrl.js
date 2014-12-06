@@ -97,7 +97,7 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
                   {'name': 'Dan L',
                    'avatar': 'views/images/players/5.jpg',
                    'vs': 'views/images/players/5.jpg',
-                   'gfx': false,
+                   'gfx': true,
                    'idx': 5
                   },
   '4128163210':
@@ -321,7 +321,7 @@ app.controller('IntroCtrl', function($scope, $rootScope, $location, $http) {
                   {'name': 'Paul A',
                    'avatar': 'views/images/players/36/avatar.jpg',
                    'vs': 'views/images/players/36/vs.png',
-                   'gfx': true,
+                   'gfx': false,
                    'idx': 36
                   },
   '4811602102':
