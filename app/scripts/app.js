@@ -30,18 +30,11 @@ app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpPro
   );
 }]);
 
-app.run(function($http, $rootScope) {
+app.run(function(themeManager, playersManager) {
 
-  $rootScope.players = { };
+  //get the current theme list
+  themeManager.loadThemes();
 
-  //load the theme settings into scope
-  $http.get('/app/themes/themes.json').
-    success(function(data, status, headers, config) {
-      $rootScope.themes = data;
-
-      $http.get('/app/themes/' + $rootScope.themes[0] + '/settings.json').
-        success(function(data, status, headers, config) {
-          $rootScope.themedata = data;
-        });
-    });
+  //get the current player list
+  playersManager.getUserList();
 });

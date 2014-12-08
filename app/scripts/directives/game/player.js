@@ -10,58 +10,55 @@ app.directive('player', function() {
     restrict: 'EA',
     scope:true,
     templateUrl:  'scripts/directives/game/templates/player.html',
-    controller: function($scope, $element, $attrs, $rootScope) {
+    controller: function($scope, $element, $attrs, playersManager) {
       $scope.player=$attrs.player;
       $scope.marginleft = 0;
       $scope.marginright = 0;
       $scope.marginbottom = 0;
 
-
-
       if($scope.player == 2) {
         $scope.playerclasses = "flip-horizontal";
       }
 
-
       //watch for any stance change to the player avatar
-      $scope.$watch(function() { return $rootScope.players[$scope.player].currentstance;  },
+      $scope.$watch(function() { return playersManager.getPlayerInfo($scope.player).currentstance;  },
         function(newValue, oldValue) {
-          if(!$rootScope.players[$scope.player].currentstance) {
-            $rootScope.players[$scope.player].currentstance = "still";
+          if(!playersManager.getPlayerInfo($scope.player).currentstance) {
+            playersManager.getPlayerInfo($scope.player).currentstance = "still";
           }
-          $scope.currentstance = $rootScope.players[$scope.player].currentstance;
+          $scope.currentstance = playersManager.getPlayerInfo($scope.player).currentstance;
 
-          $scope.currentstance = $rootScope.players[$scope.player].currentstance;
+          $scope.currentstance = playersManager.getPlayerInfo($scope.player).currentstance;
 
           //if there is an adjustment to the stance apply it
           // $scope.playerImage = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].image;
-          $scope.playerImage = "url(" + $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].image + ")";
+          $scope.playerImage = playersManager.getPlayerInfo($scope.player).stances[playersManager.getPlayerInfo($scope.player).currentstance].image;
 
-          $rootScope.players[$scope.player].positionoffsetx = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].positionoffsetx;
-          $rootScope.players[$scope.player].positionoffsety = $rootScope.players[$scope.player].stances[$rootScope.players[$scope.player].currentstance].positionoffsety;
+          playersManager.getPlayerInfo($scope.player).positionoffsetx = playersManager.getPlayerInfo($scope.player).stances[playersManager.getPlayerInfo($scope.player).currentstance].positionoffsetx;
+          playersManager.getPlayerInfo($scope.player).positionoffsety = playersManager.getPlayerInfo($scope.player).stances[playersManager.getPlayerInfo($scope.player).currentstance].positionoffsety;
         }
       );
 
       //allow the player avatar to move on the x axis based on some event
-      $scope.$watch(function() { return $rootScope.players[$scope.player].positionoffsetx;  },
+      $scope.$watch(function() { return playersManager.players[$scope.player].positionoffsetx;  },
         function(newValue, oldValue) {
 
           //if there is an adjustment to the offsetx apply it
           if($scope.player == 2) {
-            $scope.marginright = $rootScope.players[$scope.player].positionoffsetx;
+            $scope.marginright = playersManager.getPlayerInfo($scope.player).positionoffsetx;
           }
           else {
-            $scope.marginleft = $rootScope.players[$scope.player].positionoffsetx;
+            $scope.marginleft = playersManager.getPlayerInfo($scope.player).positionoffsetx;
           }
         }
       );
 
       //allow the player avatar to move on the y axis based on some event
-      $scope.$watch(function() { return $rootScope.players[$scope.player].positionoffsety;  },
+      $scope.$watch(function() { return playersManager.getPlayerInfo($scope.player).positionoffsety;  },
         function(newValue, oldValue) {
 
           //if there is an adjustment to the offsetx apply it
-          $scope.marginbottom = $rootScope.players[$scope.player].positionoffsety;
+          $scope.marginbottom = playersManager.getPlayerInfo($scope.player).positionoffsety;
         }
       );
     },

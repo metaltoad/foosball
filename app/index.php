@@ -18,7 +18,7 @@
     <link type="text/css" href="stylesheet/style.css" rel="stylesheet">
     <meta charset=utf-8 />
     </head>
-    <body ng-app="FoozKombat" ng-controller="InputCtrl" ng-keypress="recordInput($event)">
+    <body ng-app="FoozKombat" ng-keypress="$broadcast('keypress', $event)">
         <div id="angular-view-wrapper" ng-view></div>
 
         <!-- Angular Core -->
@@ -35,6 +35,10 @@
 
         <!---App files-->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/gamemessages.js"></script>
+        <script src="scripts/services/playersManager.js"></script>
+        <script src="scripts/services/sessionManager.js"></script>
+        <script src="scripts/services/themeManager.js"></script>
         <script src="scripts/controllers/InputCtrl.js"></script>
         <script src="scripts/controllers/IntroCtrl.js"></script>
         <script src="scripts/controllers/MainCtrl.js"></script>
@@ -46,7 +50,6 @@
         <script src="scripts/directives/game/wins.js"></script>
         <script src="scripts/directives/vs/vs-avatar.js"></script>
         <script src="scripts/directives/vs/vs-location.js"></script>
-        <script src="scripts/services/gamemessages.js"></script>
         <script src="scripts/directives/game/taunt.js"></script>
 
         <?php

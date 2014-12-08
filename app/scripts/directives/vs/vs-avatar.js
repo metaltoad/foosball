@@ -10,8 +10,8 @@ app.directive('vsavatar', function() {
     restrict: 'EA',
     scope:true,
     templateUrl:  'scripts/directives/vs/templates/vs-avatar.html',
-    controller: function($scope, $element, $attrs, $rootScope) {
-      $scope.player = $rootScope.players[$attrs.vsavatar];
+    controller: function($scope, $element, $attrs, playersManager) {
+      $scope.player = playersManager.getPlayerInfo($attrs.vsavatar);
     }
   }
 })

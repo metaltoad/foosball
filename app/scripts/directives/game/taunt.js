@@ -10,12 +10,12 @@ app.directive('taunt', function() {
     restrict: 'EA',
     scope:true,
     templateUrl:  'scripts/directives/game/templates/taunt.html',
-    controller: function($scope, $element, $attrs, $rootScope) {
+    controller: function($scope, $element, $attrs, playersManager) {
       $scope.player = $attrs.taunt;
 
-      $scope.$watch(function() { return $rootScope.players[$scope.player].taunt;  },
+      $scope.$watch(function() { return playersManager.getPlayerList($scope.player).taunt;  },
         function(newValue, oldValue) {
-          $scope.taunt = $rootScope.players[$scope.player].taunt;
+          $scope.taunt = playersManager.getPlayerList($scope.player).taunt;
         }
       );
     }

@@ -1,18 +1,23 @@
 'use strict';
 
-app.controller('VSCtrl', function($scope, $routeParams, $rootScope, $timeout, $location) {
+app.controller('VSCtrl', function($scope, $timeout, $location, playersManager, sessionManager, themeManager) {
 
-  $timeout(function() { $location.url("/game");}, 3000);
+  if(playersManager.getPlayerList() < 2) {
+    playersManager.players = [];
+    $location.url("/");
+  }
 
-  var randLoc = Math.floor((Math.random() * Object.keys($rootScope.themedata.backgrounds).length));
-  $rootScope.location = $rootScope.themedata.backgrounds[randLoc];
+  //get the current theme path for the style sheet
+  $scope.currentThemePath = themeManager.getCurrentThemePath();
+
+  //get a new background
+  $scope.location = sessionManager.getRandomBackground();
+
+  //timeout the vs screen and go into the game
+  $timeout(function() { $location.url("/game");}, 500);
 
   document.getElementById("backdrop").style.height= window.innerHeight+"px";
     window.addEventListener("resize", function(e) {
       document.getElementById("backdrop").style.height= window.innerHeight+"px";
     });
-
-  $rootScope.handleVSInput = function($e) {
-
-  }
 });

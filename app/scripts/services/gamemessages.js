@@ -1,19 +1,17 @@
-app.service('gamemessages', ['$timeout', '$rootScope', function($timeout, $rootScope) {
-
-  var originalTextStyle = document.getElementById("gamemessage").style;
+app.service('gamemessages', ['$timeout', 'themeManager', '$rootScope', function($timeout, themeManager, $rootScope) {
 
   this.showMessage = function(messageid, prefix, subfix) {
 
-    if($rootScope.themedata.messages[messageid].type == "sequence") {
+    if(themeManager.themeData.messages[messageid].type == "sequence") {
       return this.showMessages(messageid);
     }
 
-    if($rootScope.themedata.messages[messageid].type == "random") {
-      var randMsg = Math.floor((Math.random() * $rootScope.themedata.messages[messageid].text.length));
-      var msg = $rootScope.themedata.messages[messageid].text[randMsg];
+    if(themeManager.themeData.messages[messageid].type == "random") {
+      var randMsg = Math.floor((Math.random() * themeManager.themeData.messages[messageid].text.length));
+      var msg = themeManager.themeData.messages[messageid].text[randMsg];
     }
     else {
-      var msg = $rootScope.themedata.messages[messageid].text;
+      var msg = themeManager.themeData.messages[messageid].text;
     }
 
     if(prefix) {
@@ -24,20 +22,20 @@ app.service('gamemessages', ['$timeout', '$rootScope', function($timeout, $rootS
       msg += " " + subfix;
     }
 
-    if($rootScope.themedata.messages[messageid].position == "fixed") {
-      document.getElementById("gamemessage").style = originalTextStyle;
-    }
-    else {
-      //pick a random spot to show the taunt and then set the message there
-      //document.getElementById("gamemessage").style.position = "absolute";
-      var randtop = Math.floor((Math.random() * 400));
-      var randleft = Math.floor((Math.random() * 200 + 100));
-      document.getElementById("gamemessage").style.top = randtop + "px";
-      document.getElementById("gamemessage").style.left = randleft + "px";
-    }
+//    if(themeManager.themeData.messages[messageid].position == "fixed") {
+//      document.getElementById("gamemessage").style = originalTextStyle;
+//    }
+//    else {
+//      //pick a random spot to show the taunt and then set the message there
+//      //document.getElementById("gamemessage").style.position = "absolute";
+//      var randtop = Math.floor((Math.random() * 400));
+//      var randleft = Math.floor((Math.random() * 200 + 100));
+//      document.getElementById("gamemessage").style.top = randtop + "px";
+//      document.getElementById("gamemessage").style.left = randleft + "px";
+//    }
 
-    $rootScope.gamemessagetext = msg;
-    $timeout(function() { $rootScope.gamemessagetext = false}, $rootScope.themedata.messages[messageid].timeout);
+    $rootScope.$broadcast('gamemessage', msg);
+    $timeout(function() { $rootScope.$broadcast('gamemessage', false); }, themeManager.themeData.messages[messageid].timeout);
   }
 
   this.showMessages = function(messageid, index) {
@@ -46,44 +44,44 @@ app.service('gamemessages', ['$timeout', '$rootScope', function($timeout, $rootS
       index = 0;
     }
 
-    if($rootScope.themedata.messages[messageid].position == "fixed") {
-      document.getElementById("gamemessage").style = originalTextStyle;
-    }
-    else {
-      //pick a random spot to show the taunt and then set the message there
-      document.getElementById("gamemessage").style.position = "absolute";
-      var randtop = Math.floor((Math.random() * 400));
-      var randleft = Math.floor((Math.random() * 400 + 300));
-      document.getElementById("gamemessage").style.top = randtop + "px";
-      document.getElementById("gamemessage").style.left = randleft + "px";
-    }
+//    if(themeManager.themeData.messages[messageid].position == "fixed") {
+//      document.getElementById("gamemessage").style = originalTextStyle;
+//    }
+//    else {
+//      //pick a random spot to show the taunt and then set the message there
+//      document.getElementById("gamemessage").style.position = "absolute";
+//      var randtop = Math.floor((Math.random() * 400));
+//      var randleft = Math.floor((Math.random() * 400 + 300));
+//      document.getElementById("gamemessage").style.top = randtop + "px";
+//      document.getElementById("gamemessage").style.left = randleft + "px";
+//    }
 
-    $rootScope.gamemessagetext = $rootScope.themedata.messages[messageid].text[index];
+    $rootScope.$broadcast('gamemessage', themeManager.themeData.messages[messageid].text[index]);
 
     var gm = this;
 
     $timeout(function() {
-      if($rootScope.themedata.messages[messageid].text[index + 1]) {
+      if(themeManager.themeData.messages[messageid].text[index + 1]) {
         gm.showMessages(messageid, index+1);
       }
       else {
-        $rootScope.gamemessagetext = false;
+        $rootScope.$broadcast('gamemessage', false);
       }
-    }, $rootScope.themedata.messages[messageid].timeout);
+    }, themeManager.themeData.messages[messageid].timeout);
   }
   //show a random taunt for the player specified
   this.showRandomTaunt = function(player, type) {
 
-    if(Array.isArray($rootScope.players[player].taunts[type].text)) {
+    if(Array.isArray(player.taunts[type].text)) {
       //pick a random taunt
-      var randMsg = Math.floor((Math.random() * $rootScope.players[player].taunts[type].text.length));
+      var randMsg = Math.floor((Math.random() * player.taunts[type].text.length));
 
       //assign the player their taunt
-      $rootScope.players[player].taunt = $rootScope.players[player].taunts[type].text[randMsg];
+      player.taunt = player.taunts[type].text[randMsg];
     }
     else {
-      $rootScope.players[player].taunt = $rootScope.players[player].taunts[type].text;
+      player.taunt = player.taunts[type].text;
     }
-    $timeout(function() { $rootScope.players[player].taunt = false}, $rootScope.players[player].taunts[type].timeout);
+    $timeout(function() { player.taunt = false}, player.taunts[type].timeout);
   }
 }]);

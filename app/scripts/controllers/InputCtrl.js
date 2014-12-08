@@ -1,35 +1,34 @@
 'use strict';
 
-app.controller('InputCtrl', function($scope, $route, $rootScope, $location) {
+app.controller('InputCtrl', function($scope, $route, $location, playersManager, sessionManager, themeManager) {
+  $scope.recordInput = function($e) {
+    
+    var key = String.fromCharCode($e.which);
 
-$scope.recordInput = function($e) {
+    //some keys are universal so allow them to be used here
+    switch(key) {
+      case "w": {
+          //send back to the login
+          playersManager.players = [];
+          $location.url("/");
+          break;
+        }
+    }
 
-  var key = String.fromCharCode($e.which);
-
-  //some keys are universal so allow them to be used here
-  switch(key) {
-    case "w": {
-        //send back to the login
-        $rootScope.players = [];
-        $location.url("/");
-        break;
+    switch($route.current.originalPath) {
+      case "/game": {
+          playersManager.handleGameInput($e, key);
+          break;
       }
-  }
+      default: {
+          //handle the sesssion input
+          sessionManager.handleSessionInput($e, key);
 
-  switch($route.current.originalPath) {
-    case "/vs": {
-        $rootScope.handleVSInput($e, key);
-        break;
-    }
-    case "/game": {
-        $rootScope.handleFightInput($e, key);
-        break;
-    }
-    default: {
-        $rootScope.handleLogin($e);
-        break;
+          //update the session
+
+
+          break;
+      }
     }
   }
-}
-
 });

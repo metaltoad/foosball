@@ -10,17 +10,19 @@ app.directive('healthbar', function() {
     restrict: 'EA',
     scope:true,
     templateUrl:  'scripts/directives/game/templates/healthbar.html',
-    controller: function($scope, $element, $attrs, $rootScope) {
-      $scope.player=$attrs.healthbar;
+    controller: function($scope, $element, $attrs, playersManager, themeManager) {
 
-      if(!$rootScope.players[$scope.player].health) {
-        $rootScope.players[$scope.player].health = $rootScope.themedata.winningscore;
-      }
+      //set the initial value to the default
+      playersManager.getPlayerInfo($attrs.healthbar).health = themeManager.themeData.winningscore;
 
-      $scope.$watch(function() { return $rootScope.players[$scope.player].health;  },
+      //set the name
+      $scope.name = playersManager.getPlayerInfo($attrs.healthbar).name;
+
+      //will watch the value on the player manager and update the % value when it changes
+      $scope.$watch(function() { return playersManager.getPlayerInfo($attrs.healthbar).health;  },
         function(newValue, oldValue) {
           //adjust the healthbar element
-          document.getElementById("health" + $scope.player).style.width= (newValue * (100 / $rootScope.themedata.winningscore)) + "%";
+          $scope.healthPercent = (playersManager.getPlayerInfo($attrs.healthbar).health * (100 / themeManager.themeData.winningscore));
         }
       );
     }
