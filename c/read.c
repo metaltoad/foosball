@@ -14,7 +14,6 @@ printchar(char *c)
 
     for(i = 0; i < 11; i++) 
     {
-
         char buf[2];
 
         sprintf(buf, "%c", c[i]);
@@ -50,8 +49,11 @@ get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num)
         sprintf(buf + strlen(buf),"%d", pbtData[szPos]);
     }
 
+    prepend(buf, "*");    
     prepend(buf, num);
+    prepend(buf, "<");
     printchar(buf);
+    printchar(">");
     memset(&buf[0], 0, sizeof(buf));
 }
 
