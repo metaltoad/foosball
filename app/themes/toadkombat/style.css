@@ -1,0 +1,461 @@
+
+
+
+
+.ng-scope {
+  position: relative;
+}
+
+
+/************************************************************
+      Mortal Kombat Classic welcome page styles
+************************************************************/
+
+#angular-view-wrapper {
+    background-color: black;
+}
+
+.intro-background {
+  background: url(/app/themes/toadkombat/images/title.png) center no-repeat;
+}
+
+.welcome-background {
+  background: url(/app/themes/toadkombat/images/welcome.png) center no-repeat, url(/app/themes/toadkombat/images/welcome-repeater.png) repeat-x;
+}
+
+.vsbackground {
+  background: url(/app/themes/toadkombat/images/vs.png) center no-repeat, url(/app/themes/toadkombat/images/vs-repeater.png) repeat-x;
+}
+
+.intro-background, .welcome-background, .vsbackground {
+  background-size: auto 100%;
+  background-position: 50% 100%;
+}
+
+.playerbox {
+  position: relative;
+  top: 66%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.welcomeplayer, .locationtext  {
+  font-size: 5vmin;
+  /*color: #efe918;*/
+  color: #F15F22;
+  font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 2px #000;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+.playername {
+  color: yellow;
+  font-size: 20px;
+  position: absolute;
+}
+
+.healthbar {
+  height: 28px;
+  background-color: green;
+}
+
+.containerbox {
+  position: absolute;
+  bottom: 5%;
+  width: 100%
+}
+
+.healthbar-container {
+  width: 100%;
+  display: inline-block;
+}
+
+.healthbarcontainer {
+  width: 100%;
+  height: 30px;
+  background-color: red;
+  border: 1px solid yellow;
+}
+
+.gametimer, .gamemessage {
+  font-size: 5vw;
+  /*color: red;*/
+  color: #F15F22;
+  text-shadow: 1px 1px 2px #000;
+  font-family: fantasy;
+  margin: auto;
+  display: inline;
+  width: 40%;
+}
+
+.game-background {
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center bottom;
+}
+
+
+/******************************
+      vs. screen styling
+******************************/
+
+
+.top-block {
+  display: block;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 3%;
+}
+
+.top-container {
+  display: block;
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 3%;
+}
+
+.vscontainer {
+  width: 100%;
+}
+
+.avatarcontainer {
+  width: 100%;
+  text-align: center;
+}
+
+.avatarcontainer img {
+  width: 2vw;
+}
+
+.kombatzone {
+  text-align: center;
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+}
+
+.avatar {
+  display: inline-block;
+  width: 35%;
+  margin: 0 4%;
+}
+
+.img-right {
+  float: right;
+}
+
+.img-left {
+  float: left;
+}
+
+.center {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+.ng-scope img {
+  width: 100%;
+  height: auto;
+}
+
+
+/******************************
+    battle screen styling
+******************************/
+
+
+#gamemessage, .gametimer, .gamemessage {
+  text-align: center;
+  position: initial;
+}
+
+/*#gamemessage, .gamemessage {
+  position: initial;
+}*/
+
+.top-info {
+  padding-top: 3%;
+  text-align: center;
+}
+
+.avatar-health {
+  display: inline-flex;
+  width: 30%;
+}
+
+.avatar-health.left.img-left .playername,
+.avatar-health.right.img-right .playername  {
+  position: absolute;
+  color: #F15F22;
+  text-shadow: 1px 1px 2px #000;
+  font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.avatar-health.left.img-left .playername {
+  left: 2%;
+}
+
+.avatar-health.right.img-right .playername {
+  right: 2%;
+}
+
+.avatar.thumb {
+  border: 2px solid #F15F22;
+  border-radius: 100px;
+  box-shadow: 0px 2px 5px #000;
+  overflow: hidden;
+  width: 25%;
+}
+
+.healthbar-container {
+  display: inline-block;
+  margin: auto;
+}
+
+/*div#health2 {
+  float: right;
+}
+
+.gifcontainer {
+  position: relative;
+  padding: 0 10%;
+  margin-top: 27%;
+}
+
+.fightercontainer {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10%;
+  display: table;
+}
+
+.playercontainer {
+  display: table;
+}*/
+
+.player1container {
+  margin-left: 5%;
+  width: 45%;
+}
+
+.player1container .taunt, .player2container .taunt {
+  top: 40px;
+}
+
+.player2container {
+  margin-right: 5%;
+  width: 45%;
+}
+
+.player {
+  height: 299px;
+  width: 260px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.player2 {
+  float: right;
+}
+
+.player1.scoredon, .player1.score {
+  float: right;
+  margin-right: -100px;
+}
+
+.player2.scoredon, .player2.score {
+  float: left;
+  margin-left: -100px;
+}
+
+.player1container .taunt {
+  right: 5px;
+}
+
+.taunt-box {
+  height: 10%;
+}
+
+.taunt {
+  display: inline-block !important; /* overrides angular's ng-hide with display:none !important*/
+  position: absolute;
+  top: -83px;
+  min-width: 100px;
+  padding:10px;
+  color:#000;
+  background:#f3961c; /* default background for browsers without gradient support */
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9d835), to(#f3961c));
+  background:-moz-linear-gradient(#f9d835, #f3961c);
+  background:-o-linear-gradient(#f9d835, #f3961c);
+  background:linear-gradient(#f9d835, #f3961c);
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.taunt.ng-hide {
+  visibility: hidden; /* works with .taunt to change angular's display none */
+}
+
+.taunt:after {
+  content:"";
+  position:absolute;
+  bottom:-15px; /* value = - border-top-width - border-bottom-width */
+  left:50px; /* controls horizontal position */
+  border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:#f3961c transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+.flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph; /*IE*/
+  filter: fliph; /*IE*/
+}
+
+/*.wrapper {
+  height: 100%;
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  display: table-row;
+  height: 1px;
+  background: @yellow;
+}
+
+.main {
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+.box {
+  display: table-cell;
+}
+
+.sidebar {
+  width: 100px;
+  background: @orange;
+}
+
+.footer {
+  display: table-row;
+  height:1px;
+  background: @green;
+  color: @beige;
+}*/
+
+
+
+/******************************
+    Media Queries
+******************************/
+
+
+
+@media (min-height: 1080px) {
+  .player1container, .player2container {
+    zoom: 1.7;
+  }
+  .containerbox {
+    bottom: 0;
+  }
+  .vsbackground .avatar {
+    display: inline-block;
+    width: 28%;
+    margin: 0 3%;
+  }
+  .top-block {
+    margin-bottom: 5.5%;
+  }
+}
+
+@media (max-height: 984px) {
+  .player1container, .player2container {
+    zoom: 1.7;
+    bottom: 6%;
+  }
+  .containerbox {
+    bottom: 0;
+  }
+  .avatar {
+    display: inline-block;
+    width: 27%;
+    margin: 0 3%;
+  }
+  .top-block {
+    margin-bottom: 5%;
+  }
+  .avatar.thumb {
+    width: 35%;
+  }
+}
+
+@media (max-height: 600px) {
+  .player1container, .player2container {
+    zoom: 1.4;
+  }
+  .vsbackground .avatar {
+    display: inline-block;
+    width: 26%;
+    margin: 0 2%;
+  }
+}
+
+@media (max-height: 400px) {
+  .player1container, .player2container {
+    zoom: .5;
+  }
+  .intro-background {
+    background-image: url(/app/themes/mortalkombatclassic/images/title-stretched.png);
+  }
+  .playerbox {
+    top: 66%;
+  }
+  .playerbox .welcomeplayer {
+    font-size: 4vh;
+  }
+  .vsbackground .avatar {
+    display: inline-block;
+    width: 23%;
+    margin: 0 2%;
+  }
+}
+
+@media (max-height: 250px) {
+  .player1container, .player2container {
+    zoom: .2;
+    bottom: 6%;
+  }
+  .playerbox {
+    top: 67%;
+  }
+  .playerbox .welcomeplayer {
+    font-size: 4vh;
+    padding: 5px;
+  }
+  .vsbackground .avatar {
+    display: inline-block;
+    width: 30%;
+    margin: 0 2%;
+  }
+}
+
+

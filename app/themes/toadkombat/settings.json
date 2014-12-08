@@ -1,0 +1,135 @@
+{
+    "themename": "Toad Kombat",
+    "themebackground": "title.png",
+    "vsbackground": "vs.png",
+    "graphicstype": "provided",
+    "defaultplayer" : {
+                        "name": "Player",
+                        "vsavatar": "guestavatar.jpg",
+                        "provideddefaults": "8",
+                        "stances": {
+                            "still": {
+                                    "image": "still.gif"
+                            },
+                            "score": {
+                                    "image": "score.gif"
+                            },
+                            "finishthem": {
+                                    "image": "finishthem.gif"
+                            },
+                            "scoredon": {
+                                    "image": "scoredon.gif"
+                            },
+                            "skunkedon": {
+                                    "image": "lost.gif"
+                            },
+                            "skunked": {
+                                    "image": "won.gif"
+                            },
+                            "won":{
+                                    "image": "won.gif"
+                            },
+                            "lost":{
+                                    "image": "lost.gif"
+                            }
+                        },
+                        "taunts" : {
+                            "score": {
+                                "text": ["Take that!", "Bamn!"],
+                                "timeout": "2000"
+                            },
+                            "finishthem": {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "scoredon": {
+                                "text": "I'll get you!",
+                                "timeout": "2000"
+                            },
+                            "skunked":  {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "skunkedon":  {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "won": {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "lost":  {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "force1": {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "force2": {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "force3": {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "force4": {
+                                "text": "",
+                                "timeout": "2000"
+                            },
+                            "force5": {
+                                "text": "",
+                                "timeout": "2000"
+                            }
+                        }
+                    },
+    "winningscore": "5",
+    "scoretype": "healthbar",
+    "messages" : {
+        "matchstart" : {
+            "text": [ "Ready!", "Fight!!"],
+            "timeout": "2000",
+            "position": "fixed",
+            "type": "sequence"
+        },
+        "goal": {
+            "text": ["Bam!", "POW!", "Zip!!"],
+            "timeout": "2000",
+            "position": "floating",
+            "type": "random"
+        },
+        "skunked": {
+            "text": "Flawless Victory!",
+            "timeout": "4000",
+            "position": "fixed",
+            "type": "message"
+        },
+        "finishthem": {
+            "text": "Finish Them!!",
+            "timeout": "5000",
+            "position": "fixed",
+            "type": "message"
+        },
+        "winner": {
+            "text": "Wins!",
+            "timeout": "60000",
+            "position": "fixed",
+            "type": "message"
+        }
+    },
+    "backgrounds" : {
+                    "0": {
+                        "name": "Barista",
+                        "background": "arenas/barista.jpg"
+                    },
+                    "1": {
+                        "name": "Ground Kontrol",
+                        "background": "arenas/director_park.jpg"
+                    },
+                    "2": {
+                        "name": "Director Park",
+                        "background": "arenas/ground_kontrol.jpg"
+                    }
+    }
+}

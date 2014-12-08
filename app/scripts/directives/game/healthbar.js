@@ -12,17 +12,26 @@ app.directive('healthbar', function() {
     templateUrl:  'scripts/directives/game/templates/healthbar.html',
     controller: function($scope, $element, $attrs, playersManager, themeManager) {
 
-      //set the initial value to the default
-      playersManager.getPlayerInfo($attrs.healthbar).health = themeManager.themeData.winningscore;
+      if(playersManager.getPlayerInfo($attrs.healthbar)) {
+        //set the initial value to the default
+        playersManager.getPlayerInfo($attrs.healthbar).health = themeManager.themeData.winningscore;
 
-      //set the name
-      $scope.name = playersManager.getPlayerInfo($attrs.healthbar).name;
+        //set the name
+        $scope.name = playersManager.getPlayerInfo($attrs.healthbar).name;
+      }
 
       //will watch the value on the player manager and update the % value when it changes
-      $scope.$watch(function() { return playersManager.getPlayerInfo($attrs.healthbar).health;  },
+      $scope.$watch(function() {
+          if(playersManager.getPlayerInfo($attrs.healthbar)) {
+            return playersManager.getPlayerInfo($attrs.healthbar).health;
+          }
+          return null;
+        },
         function(newValue, oldValue) {
-          //adjust the healthbar element
-          $scope.healthPercent = (playersManager.getPlayerInfo($attrs.healthbar).health * (100 / themeManager.themeData.winningscore));
+          if(playersManager.getPlayerInfo($attrs.healthbar)) {
+            //adjust the healthbar element
+            $scope.healthPercent = (playersManager.getPlayerInfo($attrs.healthbar).health * (100 / themeManager.themeData.winningscore));
+          }
         }
       );
     }

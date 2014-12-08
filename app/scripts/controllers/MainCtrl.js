@@ -32,6 +32,8 @@ app.controller('MainCtrl', function($scope, $rootScope, sessionManager, themeMan
   }
 
   //set the background image
+  //tried this with interpolation but there was a race condition in getting the background size.
+  //this actually works better
   document.getElementById("backdrop").style.backgroundImage= "url(/app/themes/" + $scope.currentThemePath + "/images/" + sessionManager.getCurrentBackground().background + ")";
   document.getElementById("backdrop").style.height= window.innerHeight+"px";
   window.addEventListener("resize", function(e) {

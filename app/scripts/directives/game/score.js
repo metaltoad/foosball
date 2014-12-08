@@ -17,7 +17,12 @@ app.directive('score', function() {
         playersManager.getPlayerList($scope.player).score = 0;
       }
 
-      $scope.$watch(function() { return playersManager.getPlayerList($scope.player).score;  },
+      $scope.$watch(function() {
+          if(playersManager.getPlayerList($scope.player)) {
+            return playersManager.getPlayerList($scope.player).score;
+          }
+          return null;
+        },
         function(newValue, oldValue) {
           $scope.score = newValue;
         }

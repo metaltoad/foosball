@@ -1,4 +1,4 @@
-app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeout', function(themeManager, gamemessages, $http, $timeout) {
+app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeout', '$location', function(themeManager, gamemessages, $http, $timeout, $location) {
 
   var scoreTimeout = 2000;
   var scoreInterval = false;
@@ -19,6 +19,10 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
       });
   };
 
+  this.resetPlayerList = function() {
+    this.players = [];
+  }
+
   this.getPlayerList = function() {
     return this.players;
   }
@@ -26,15 +30,12 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
   //handle the nfc tag scans
   //return true for tag processed
   //false for the tag failed
-  this.processNFC = function(tagUID) {
-
-    //playersManager.loadUser();
-
-  }
-
-  function stringIsNumber(s) {
-    var x = +s; // made cast obvious for demonstration
-    return x.toString() === s;
+  this.processNFC = function(nfcPlayer, tagUID) {
+    if(this.users[tagUID]) {
+      this.loadUser(nfcPlayer, tagUID);
+      return true;
+    }
+    return false;
   }
 
   this.loginGuest = function(guestNumber) {
@@ -66,7 +67,7 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
     var react = Math.floor((Math.random() * 10) + 1);
 
     if(react == 5) {
-      gamemessages.showRandomTaunt(opposing, "scoredon");
+      gamemessages.showRandomTaunt(this.players[opposing], "scoredon");
     }
 
     //show goal message
@@ -135,6 +136,8 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
   }
 
   this.gameWon = function(winner, opposing) {
+    var scope = this;
+
     //set the players stances
     //check if it was a skunk out
     var skunk = false;
@@ -157,14 +160,14 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
       gamemessages.showMessage("skunked");
 
       //wait for timeout on winner show skunked
-      $timeout(function() { gamemessages.showMessage("winner", this.players[winner].name)}, themeManager.themeData.messages['skunked'].timeout);
+      $timeout(function() { gamemessages.showMessage("winner", scope.players[winner].name)}, themeManager.themeData.messages['skunked'].timeout);
 
       //special skunk stances
       this.players[winner].currentstance = "skunked";
       this.players[opposing].currentstance = "skunkedon";
 
-      gamemessages.showRandomTaunt(winner, "skunked");
-      gamemessages.showRandomTaunt(winner, "skunkedon");
+      gamemessages.showRandomTaunt(this.players[winner], "skunked");
+      gamemessages.showRandomTaunt(this.players[winner], "skunkedon");
     }
     else {
 
@@ -176,8 +179,8 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
       this.players[opposing].currentstance = "lost";
 
       //show taunt messages
-      gamemessages.showRandomTaunt(winner, "won");
-      gamemessages.showRandomTaunt(opposing, "lost");
+      gamemessages.showRandomTaunt(this.players[winner], "won");
+      gamemessages.showRandomTaunt(this.players[opposing], "lost");
     }
 
     //kill the timer
@@ -185,7 +188,7 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
 
     //reset things
     $timeout(function() {
-      this.players = {};
+      scope.players = {};
       $location.url("/");
     }, 10000);
   }

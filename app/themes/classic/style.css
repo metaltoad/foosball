@@ -13,6 +13,10 @@
       Classic welcome page styles
 ************************************************************/
 
+#angular-view-wrapper {
+    background-color: black;
+}
+
 .intro-background {
   background: url(/app/themes/classic/images/title.png) center no-repeat;
 }
@@ -270,7 +274,7 @@
 .header {
   display: table-row;
   height: 1px;
-  background: @yellow;
+  background: yellow;
 }
 
 .main {
@@ -285,14 +289,14 @@
 
 .sidebar {
   width: 100px;
-  background: @orange;
+  background: orange;
 }
 
 .footer {
   display: table-row;
   height:1px;
-  background: @green;
-  color: @beige;
+  background: green;
+  color: beige;
 }
 
 

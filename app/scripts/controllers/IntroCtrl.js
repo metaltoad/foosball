@@ -6,7 +6,7 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
   var guestLogin1key = "[";
   var guestLogin2key = "'";
   var cycleThemekey = "-";
-  var resetKey = "u";
+  var resetKey = "w";
   var nfcKey = "*";
   var nfcStartChar = "<";
   var nfcEndChar = ">";
@@ -32,39 +32,57 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
   $scope.currentThemePath = themeManager.getCurrentThemePath();
   $scope.players = [];
 
+  function stringIsNumber(s) {
+    var x = +s; // made cast obvious for demonstration
+    return x.toString() === s;
+  }
+
   $rootScope.$on('keypress', function(event, e){
     var key = String.fromCharCode(e.which);
 
-    if($scope.nfcInput) {
-      if($scope.nfcData == "" && key == $scope.nfcStartChar) {
+    if(key == resetKey) {
+      nfcData = "";
+      nfcInput = false;
+      nfcValid = false;
+      nfcPlayer = 0;
+      playersManager.resetPlayerList();
+    }
+
+    if(nfcInput) {
+      if(nfcData == "" && key == nfcStartChar) {
         //if the buffer is empty and this is the start key
         //set the nfc valid to true to the following chars will be accepted
-        $scope.nfcValid = true;
+        nfcValid = true;
       }
-      else if($scope.nfcData == "" && key != $scope.nfcStartChar) {
+      else if(!nfcValid && nfcData == "" && key != nfcStartChar) {
         //get the player number
-        $scope.nfcPlayer = key;
+        nfcPlayer = key;
       }
-      else if(this.nfcData != "" && key == $scope.nfcEndChar) {
-        $scope.nfcInput = false;
-        $scope.nfcValid = false;
+      else if(nfcData != "" && key == nfcEndChar) {
+        nfcInput = false;
+        nfcValid = false;
 
         //send the code off to be validated now that we have it
-        if(playersManager.processNFC(nfcInput)) {
+        if(playersManager.processNFC(nfcPlayer, nfcData)) {
           //refresh the scope with the new user info
-          $scope.players[this.nfcPlayer] = playersManager.getPlayerInfo($scope.nfcPlayer);
+          $scope.players[nfcPlayer] = playersManager.getPlayerInfo(nfcPlayer);
           $scope.checkLogins();
         }
+        //kill the buffer
+        nfcData = "";
+        nfcInput = false;
+        nfcValid = false;
+        nfcPlayer = 0;
       }
-      else if($scope.nfcValid && stringIsNumber(key)) { //if we are valid in our buffer data continue
-        $scope.nfcData += key;
+      else if(nfcValid && stringIsNumber(key)) { //if we are valid in our buffer data continue
+        nfcData += key;
       }
       else {
         //kill the buffer
-        $scope.nfcData = "";
-        $scope.nfcInput = false;
-        $scope.nfcValid = false;
-        $scope.nfcPlayer = 0;
+        nfcData = "";
+        nfcInput = false;
+        nfcValid = false;
+        nfcPlayer = 0;
       }
     }
     else {

@@ -39,7 +39,6 @@
         <script src="scripts/services/playersManager.js"></script>
         <script src="scripts/services/sessionManager.js"></script>
         <script src="scripts/services/themeManager.js"></script>
-        <script src="scripts/controllers/InputCtrl.js"></script>
         <script src="scripts/controllers/IntroCtrl.js"></script>
         <script src="scripts/controllers/MainCtrl.js"></script>
         <script src="scripts/controllers/VSCtrl.js"></script>
