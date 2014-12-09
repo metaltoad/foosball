@@ -40,7 +40,7 @@ void prepend(char* s, const char* t) {
 }
 
 static void
-get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num, const char* read)
+get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num)
 {
     size_t  szPos;
     char buf[50];
@@ -49,15 +49,10 @@ get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num, const cha
     for (szPos = 0; szPos < szBytes; szPos++) {
         sprintf(buf + strlen(buf),"%d", pbtData[szPos]);
     }
+    
+    snprintf(printData, sizeof printData, "%s%s%s%s%s", "q", num, "e", buf, "r");
+    printchar(printData);
 
-    //optional flag to just print the code
-    if(strcmp("1", read)) {        
-        printchar(buf);
-    }
-    else {
-        snprintf(printData, sizeof printData, "%s%s%s%s%s", "q", num, "e", buf, "r");
-        printchar(printData);
-    }
     memset(&buf[0], 0, sizeof(buf));
 }
 
@@ -119,7 +114,7 @@ main(int argc, const char *argv[])
       if (nfc_initiator_select_passive_target(pnd, nmMifare, NULL, 0, &nt) > 0) {
 
           if(timeout > 15) {
-            get_uid(nt.nti.nai.abtUid, nt.nti.nai.szUidLen, argv[2], argv[3]); 
+            get_uid(nt.nti.nai.abtUid, nt.nti.nai.szUidLen, argv[2]); 
             timeout = 0;
           }
             timeout++;
