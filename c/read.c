@@ -51,7 +51,7 @@ get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num, const cha
     }
 
     //optional flag to just print the code
-    if(read == 1) {        
+    if(strcmp("1", read)) {        
         printchar(buf);
     }
     else {
