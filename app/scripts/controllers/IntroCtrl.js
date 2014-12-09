@@ -7,9 +7,9 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
   var guestLogin2key = "'";
   var cycleThemekey = "-";
   var resetKey = "w";
-  var nfcKey = "*";
-  var nfcStartChar = "<";
-  var nfcEndChar = ">";
+  var nfcKey = "q";
+  var nfcStartChar = "e";
+  var nfcEndChar = "r";
   var nfcData = "";
   var nfcInput = false;
   var nfcValid = false;

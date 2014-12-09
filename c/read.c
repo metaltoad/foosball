@@ -49,11 +49,11 @@ get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num)
         sprintf(buf + strlen(buf),"%d", pbtData[szPos]);
     }
 
-    prepend(buf, "*");    
+    prepend(buf, "q");    
     prepend(buf, num);
-    prepend(buf, "<");
+    prepend(buf, "e");
     printchar(buf);
-    printchar(">");
+    printchar("r");
     memset(&buf[0], 0, sizeof(buf));
 }
 
