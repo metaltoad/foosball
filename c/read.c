@@ -50,12 +50,7 @@ get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num)
         sprintf(buf + strlen(buf),"%d", pbtData[szPos]);
     }
 
-    strcpy(printData, "q");
-    strcpy(printData, num);
-    strcpy(printData, "e");
-    strcpy(printData, buf);
-    strcpy(printData, "r");
-    
+    snprintf(printData, sizeof printData, "%s%s%s%s%s", "q", num, "e", buf, "r);
     printchar(printData);
 
     memset(&buf[0], 0, sizeof(buf));
