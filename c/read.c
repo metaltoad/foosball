@@ -44,16 +44,20 @@ get_uid(const uint8_t *pbtData, const size_t szBytes, const char* num)
 {
     size_t  szPos;
     char buf[50];
+    char printData[50];
 
     for (szPos = 0; szPos < szBytes; szPos++) {
         sprintf(buf + strlen(buf),"%d", pbtData[szPos]);
     }
 
-    prepend(buf, "q");    
-    prepend(buf, num);
-    prepend(buf, "e");
-    printchar(buf);
-    printchar("r");
+    strcpy(printData, "q");
+    strcpy(printData, num);
+    strcpy(printData, "e");
+    strcpy(printData, buf);
+    strcpy(printData, "r");
+    
+    printchar(printData);
+
     memset(&buf[0], 0, sizeof(buf));
 }
 
