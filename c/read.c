@@ -12,7 +12,7 @@ printchar(char *c)
     unsigned int keycode;
     display = XOpenDisplay(NULL);
 
-    for(i = 0; i < 11; i++) 
+    for(i = 0; i < 21; i++) 
     {
         char buf[2];
 
