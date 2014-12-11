@@ -167,7 +167,7 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
       this.players[opposing].currentstance = "skunkedon";
 
       gamemessages.showRandomTaunt(this.players[winner], "skunked");
-      gamemessages.showRandomTaunt(this.players[winner], "skunkedon");
+      gamemessages.showRandomTaunt(this.players[opposing], "skunkedon");
     }
     else {
 
