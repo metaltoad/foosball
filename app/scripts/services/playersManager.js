@@ -1,4 +1,4 @@
-app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeout', '$location', function(themeManager, gamemessages, $http, $timeout, $location) {
+app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeout', '$location', '$rootScope', function(themeManager, gamemessages, $http, $timeout, $location, $rootScope) {
 
   var scoreTimeout = 2000;
   var scoreInterval = false;
@@ -43,6 +43,11 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
   }
 
   this.scoreGoal = function(player) {
+
+    //if there isnt a player by that id cant score
+    if(!this.players[player]) {
+      return;
+    }
 
     //dont allow double scoring
     if(this.scoreInterval) {
@@ -188,8 +193,7 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
 
     //reset things
     $timeout(function() {
-      scope.players = [];
-      $location.url("/");
+      $rootScope.resetGame();
     }, 10000);
   }
 

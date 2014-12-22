@@ -39,7 +39,7 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
     return x.toString() === s;
   }
 
-  $rootScope.$on('keypress', function(event, e){
+  $rootScope.introKeyOff = $rootScope.$on('keypress', function(event, e){
     var key = String.fromCharCode(e.which);
 
     if(key == resetKey) {
@@ -128,8 +128,9 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
       $timeout(function() {
         $scope.loginGuest(1);
         $scope.loginGuest(2);
-        $location.url("/game");
         playersManager.scoreGoal(score);
+        $location.url("/game");
+        $rootScope.introKeyOff();
       }, 500);
     }
   }
@@ -146,6 +147,7 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
     if($scope.players[1] && $scope.players[2]) {
       //move to the vs screen
       $location.url("/vs");
+      $rootScope.introKeyOff();
     }
   }
 });

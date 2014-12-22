@@ -12,12 +12,13 @@ app.directive('score', function() {
     templateUrl:  'scripts/directives/game/templates/score.html',
     controller: function($scope, $element, $attrs, playersManager) {
       $scope.player = $attrs.score;
-      if(!playersManager.getPlayerList($scope.player).score) {
-        playersManager.getPlayerList($scope.player).score = 0;
-
-        //set the name
-        $scope.name = playersManager.getPlayerInfo($attrs.score).name;
+      if(!playersManager.getPlayerInfo($scope.player).score) {
+        playersManager.getPlayerInfo($scope.player).score = 0;
       }
+
+      //set the name
+      $scope.name = playersManager.getPlayerInfo($attrs.score).name;
+      $scope.score = playersManager.getPlayerInfo($attrs.score).score;
 
       $scope.$watch(function() {
           if(playersManager.getPlayerInfo($attrs.score)) {

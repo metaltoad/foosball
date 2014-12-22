@@ -51,11 +51,20 @@ app.controller('MainCtrl', function($scope, $rootScope, sessionManager, themeMan
   //save the session
   sessionManager.updateSession();
 
-  $rootScope.$on('gamemessage', function(e, message){
+  $scope.gameMessageBroadcast = $rootScope.$on('gamemessage', function(e, message){
     $scope.gamemessagetext = message;
   });
 
-  $rootScope.$on('keypress', function(event, e){
+  $rootScope.resetGame = function() {
+    //deregister the listener
+    $scope.keyPressMgr();
+    $scope.gameMessageBroadcast();
+    playersManager.players = [];
+    $location.url("/");
+    return;
+  }
+
+  $scope.keyPressMgr = $rootScope.$on('keypress', function(event, e){
     var key = String.fromCharCode(e.which);
 
     switch(key) {
@@ -68,9 +77,7 @@ app.controller('MainCtrl', function($scope, $rootScope, sessionManager, themeMan
         break;
       }
       case resetKey: {
-        playersManager.players = [];
-        $location.url("/");
-        return;
+        $rootScope.resetGame();
         break;
       }
     }
