@@ -7,15 +7,16 @@
       <div class="avatar thumb">
         <div class="vsavatar vs1" vsavatar="1"></div>
       </div>
-      <div class="healthbar-container" healthbar="1"></div>
-
+      <div ng-if="scoreType == 'healthbar'" class="healthbar-container" healthbar="1"></div>
+      <div ng-if="scoreType == 'score'" class="healthbar-container" score="1"></div>
     </div>
 
     <timer ng-hide="viewonly" class="gametimer" interval="1000">{{mminutes}}:{{sseconds}}</timer>
 
     <div class="avatar-health right img-right">
 
-      <div class="healthbar-container health2 img-left" healthbar="2"></div>
+      <div ng-if="scoreType == 'healthbar'" class="healthbar-container health2 img-left" healthbar="2"></div>
+      <div ng-if="scoreType == 'score'" class="healthbar-container" score="2"></div>
       <div class="avatar thumb">
         <div class="vsavatar vs2" vsavatar="2"></div>
       </div>
