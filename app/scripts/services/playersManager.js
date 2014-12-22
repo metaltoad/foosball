@@ -188,7 +188,7 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
 
     //reset things
     $timeout(function() {
-      scope.players = {};
+      scope.players = [];
       $location.url("/");
     }, 10000);
   }
@@ -216,7 +216,7 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
     if(!player['taunts']) {
       player['taunts'] = {};
     }
-    
+
     player['score'] = 0;
 
     //set the default stances
