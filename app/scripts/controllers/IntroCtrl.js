@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManager, themeManager, playersManager) {
+app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManager, themeManager, playersManager, $timeout) {
 
   var maxUserIdLength = 10;
   var guestLogin1key = "[";
@@ -14,6 +14,8 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
   var nfcInput = false;
   var nfcValid = false;
   var nfcPlayer = 0;
+  var player1Score = 'j';
+  var player2Score = 'b';
 
   if(document.getElementById("viewonly")) {
     sessionManager.getSession();
@@ -102,10 +104,35 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
         }
         case nfcKey: {
             nfcInput = true;
+            break;
+        }
+        case player1Score: {
+          //if a score is detected when no one has logged in a classic game starts auto
+          $scope.startClassicGame(1);
+        }
+        case player2Score: {
+          $scope.startClassicGame(2);
         }
       }
     }
   });
+
+  $scope.startClassicGame = function(score) {
+    if(playersManager.getPlayerList().length == 0) {
+      //get the current theme path for the style sheet
+      themeManager.loadThemeByName("classic");
+      $scope.currentThemePath = 'classic';
+      $rootScope.currentThemePath = 'classic';
+
+      //theme change is too slow added a timeout to wait for it
+      $timeout(function() {
+        $scope.loginGuest(1);
+        $scope.loginGuest(2);
+        $location.url("/game");
+        playersManager.scoreGoal(score);
+      }, 500);
+    }
+  }
 
   //login the guest specified
   $scope.loginGuest = function(guestNumber) {

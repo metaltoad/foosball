@@ -216,6 +216,8 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
     if(!player['taunts']) {
       player['taunts'] = {};
     }
+    
+    player['score'] = 0;
 
     //set the default stances
     //get a random default player to use

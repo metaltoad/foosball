@@ -8,6 +8,16 @@ app.controller('MainCtrl', function($scope, $rootScope, sessionManager, themeMan
 
   $scope.currentThemePath = themeManager.getCurrentThemePath();
 
+  $scope.scoreType = themeManager.themeData.scoretype;
+
+  if(themeManager.themeData.scoretype == "healthbar") {
+    $scope.healthbar = true;
+  }
+
+  if(themeManager.themeData.scoretype == "score") {
+    $scope.healthbar = true;
+  }
+
   //redirect the session to the login if there are not atleast 2 players in here
   if(playersManager.getPlayerList() < 2) {
     playersManager.players = [];

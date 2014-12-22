@@ -1,6 +1,7 @@
 app.service('themeManager', ['$http', '$rootScope', function($http, $rootScope) {
 
   this.currentThemeId = 0;
+  this.currentThemeName = "";
 
   this.themeList = [];
   this.themeData = {};
@@ -23,13 +24,27 @@ app.service('themeManager', ['$http', '$rootScope', function($http, $rootScope) 
   }
 
   this.getCurrentThemePath = function() {
+    if(this.currentThemeName != "") {
+      return this.currentThemeName;
+    }
     return this.themeList[this.currentThemeId];
   }
 
   this.loadTheme = function(themeID) {
     var scope = this;
 
-    $http.get('/app/themes/' + this.themeList[0] + '/settings.json').
+    $http.get('/app/themes/' + this.themeList[themeID] + '/settings.json').
+      success(function(data, status, headers, config) {
+        scope.themeData = data;
+      });
+  }
+
+  this.loadThemeByName = function(theme) {
+    var scope = this;
+
+    this.currentThemeName = theme;
+
+    $http.get('/app/themes/' + theme + '/settings.json').
       success(function(data, status, headers, config) {
         scope.themeData = data;
       });
