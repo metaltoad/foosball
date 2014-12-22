@@ -14,6 +14,10 @@
       Classic welcome page styles
 ************************************************************/
 
+#score2 {
+    right: 0;
+}
+
 .scorenumber {
     color: #FFF;
     font-size: 400px;
