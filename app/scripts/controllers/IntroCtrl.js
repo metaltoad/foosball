@@ -109,9 +109,11 @@ app.controller('IntroCtrl', function($scope, $location, $rootScope, sessionManag
         case player1Score: {
           //if a score is detected when no one has logged in a classic game starts auto
           $scope.startClassicGame(1);
+          break;
         }
         case player2Score: {
           $scope.startClassicGame(2);
+          break;
         }
       }
     }
