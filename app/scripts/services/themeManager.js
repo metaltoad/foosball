@@ -17,10 +17,8 @@ app.service('themeManager', ['$http', '$rootScope', function($http, $rootScope) 
 
     $rootScope.currentThemePath = this.themeList[this.currentThemeId];
 
-    $http.get('/app/themes/' + this.themeList[this.currentThemeId] + '/settings.json').
-      success(function(data, status, headers, config) {
-        scope.themeData = data;
-      });
+    this.loadTheme(this.currentThemeId);
+
   }
 
   this.getCurrentThemePath = function() {
@@ -57,7 +55,7 @@ app.service('themeManager', ['$http', '$rootScope', function($http, $rootScope) 
       success(function(data, status, headers, config) {
         scope.themeList = data;
 
-        scope.loadTheme(scope.themeList[0]);
+        scope.loadTheme(0);
       });
   }
 }]);

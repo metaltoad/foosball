@@ -62,7 +62,17 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
       opposing = 2;
     }
 
-    this.players[player].currentstance = "score";
+    //pick a random score stance from the ones this player has
+    var scoreStance = Math.floor((Math.random() * this.players[player].scoreStances) + 1);
+
+    if(scoreStance == 1) {
+      scoreStance = "";
+    }
+    else {
+      scoreStance = "_" + scoreStance;
+    }
+
+    this.players[player].currentstance = "score" + scoreStance;
     this.players[opposing].currentstance = "scoredon";
 
     //show player taunt
@@ -129,11 +139,11 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
 
       //switch back to the still stance only if they just left a score stance
 
-      if(scope.players[1].currentstance == "score" || scope.players[1].currentstance == "scoredon") {
+      if(scope.players[1].currentstance.indexOf("score") == 0) {
         scope.players[1].currentstance = "still";
       }
 
-      if(scope.players[2].currentstance == "score" || scope.players[2].currentstance == "scoredon") {
+      if(scope.players[2].currentstance.indexOf("score") == 0) {
         scope.players[2].currentstance = "still";
       }
 
@@ -242,6 +252,9 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
       }
     }
 
+    //load the multiple attacks
+    this.loadPlayerScoreImage(2, player, p);
+
     //set the default taunts
     for(key in themeManager.themeData.defaultplayer['taunts']) {
       if(!player['taunts'][key]) {
@@ -250,5 +263,32 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
     }
 
     return player;
+  }
+
+  this.loadPlayerScoreImage = function(score, player, playerNumber) {
+
+    var s = this;
+
+    jQuery.ajax({
+          url:'/app/themes/' + themeManager.getCurrentThemePath() + "/images/players/" + playerNumber + "/score_" + score + ".gif",
+          type:'HEAD',
+          error: function()
+          {
+              return;
+          },
+          success: function()
+          {
+              player['stances']['score_' + score] = jQuery.extend({}, themeManager.themeData.defaultplayer['stances']['score']);
+
+              player['stances']['score_' + score].image = '/app/themes/' + themeManager.getCurrentThemePath() + "/images/players/" + playerNumber + "/score_" + score + ".gif";
+              //keep tally of how many were successfully loaded
+
+              player.scoreStances = score;
+
+              //try and get another stance
+              score++;
+              s.loadPlayerScoreImage(score, player, playerNumber);
+          }
+      });
   }
 }]);

@@ -6,7 +6,7 @@
     "defaultplayer" : {
                         "name": "Player",
                         "vsavatar": "guestavatar.jpg",
-                        "provideddefaults": "8",
+                        "provideddefaults": "20",
                         "stances": {
                             "still": {
                                     "image": "still.gif"
