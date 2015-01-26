@@ -50,7 +50,7 @@
     "46116321021656129":
                   {"name": "Aubrey F",
                    "avatar": "themes/toadkombat/images/players/3/avatar.jpg",
-                   "vs": "themes/toadkombat/images/players/vs/3.png",
+                   "vs": "themes/toadkombat/images/players/vs/3/vs.png",
                    "gfx": true,
                    "idx": 3
                   },
@@ -66,7 +66,7 @@
                    "avatar": "themes/toadkombat/images/players/14/avatar.jpg",
                    "vs": "themes/toadkombat/images/players/14/vs.png",
                    "gfx": true,
-                   "idx": 22
+                   "idx": 14
                   },
     "48316221021656129":
                   {"name": "Farrah B",
@@ -79,7 +79,7 @@
                   {"name": "Ben T",
                    "avatar": "themes/toadkombat/images/players/4/avatar.jpg",
                    "vs": "themes/toadkombat/images/players/4/vs.png",
-                   "gfx": false,
+                   "gfx": true,
                    "idx": 4
                   },
     "421816321021656128":
@@ -87,7 +87,7 @@
                    "avatar": "themes/toadkombat/images/players/17/avatar.jpg",
                    "vs": "themes/toadkombat/images/players/17/vs.png",
                    "gfx": true,
-                   "idx": 29
+                   "idx": 17
                   },
     "48116021021656128" :
                   {"name": "Aaron K",
@@ -122,7 +122,7 @@
                    "avatar": "themes/toadkombat/images/players/6/avatar.jpg",
                    "vs": "themes/toadkombat/images/players/6/vs.png",
                    "gfx": true,
-                   "idx": 38
+                   "idx": 6
                   },
     "49216321021656129":
                   {"name": "Marcus B",
