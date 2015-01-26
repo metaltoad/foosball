@@ -265,12 +265,12 @@
   float: right;
 }
 
-.player1.scoredon, .player1.score {
+.player1.scoredon, div[class*="player1"] div[class*="score"] {
   float: right;
   margin-right: -100px;
 }
 
-.player2.scoredon, .player2.score {
+.player2.scoredon, div[class*="player2"] div[class*="score"] {
   float: left;
   margin-left: -100px;
 }

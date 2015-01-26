@@ -5,340 +5,144 @@
             "idx": 0,
             "gfx": false
     },
-    "4151622102" :
-                  {"name": "Joaquin",
-                   "avatar": "views/images/players/1.jpg",
-                   "vs": "views/images/players/1.jpg",
-                   "gfx": false,
+    "410815921021656128":
+                  {"name": "Adam E",
+                   "avatar": "themes/toadkombat/images/players/1/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/1/vs.png",
+                   "gfx": true,
                    "idx": 1
                   },
-    "4831622102" :
-                  {"name": "Tony R",
-                   "avatar": "views/images/players/2.jpg",
-                   "vs": "views/images/players/2.jpg",
-                   "gfx": false,
-                   "idx": 2
+    "412216321021656128":
+                  {"name": "Dan L",
+                   "avatar": "themes/toadkombat/images/players/8/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/8/vs.png",
+                   "gfx": true,
+                   "idx": 8
+                  },    
+    "44816021021656128":
+                  {"name": "Dylan T",
+                   "avatar": "themes/toadkombat/images/players/9/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/9/vs.jpg",
+                   "gfx": true,
+                   "idx": 9
                   },
-    "4491622102":
-                  {"name": "Tim W",
-                   "avatar": "views/images/players/3.jpg",
-                   "vs": "views/images/players/3.jpg",
-                   "gfx": false,
+    "425216321021656128":
+                  {"name": "Randi K",
+                   "avatar": "themes/toadkombat/images/players/16/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/16/vs.png",
+                   "gfx": true,
+                   "idx": 16
+                  },
+    "418616321021656128":
+                  {"name": "Jonathan J",
+                   "avatar": "themes/toadkombat/images/players/9/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/9/vs.jpg",
+                   "gfx": true,
+                   "idx": 9
+                  },
+    "421916321021656128":
+                  {"name": "Slavko P",
+                   "avatar": "themes/toadkombat/images/players/18/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/18/vs.png",
+                   "gfx": true,
+                   "idx": 18
+                  },
+    "46116321021656129":
+                  {"name": "Aubrey F",
+                   "avatar": "themes/toadkombat/images/players/3/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/vs/3.png",
+                   "gfx": true,
                    "idx": 3
                   },
-    "4116162210":
-                  {"name": "Adam E",
-                   "avatar": "views/images/players/4.jpg",
-                   "vs": "views/images/players/4.jpg",
+    "41516221021656129":
+                  {"name": "Jordan L",
+                   "avatar": "themes/toadkombat/images/players/12/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/12/vs.png",
+                   "gfx": true,
+                   "idx": 12
+                  },
+    "42416321021656128":
+                  {"name": "Mike L",
+                   "avatar": "themes/toadkombat/images/players/14/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/14/vs.png",
+                   "gfx": true,
+                   "idx": 22
+                  },
+    "48316221021656129":
+                  {"name": "Farrah B",
+                   "avatar": "themes/toadkombat/images/players/10/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/10/vs.png",
+                   "gfx": true,
+                   "idx": 10
+                  },
+    "42916321021656129":
+                  {"name": "Ben T",
+                   "avatar": "themes/toadkombat/images/players/4/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/4/vs.png",
                    "gfx": false,
                    "idx": 4
                   },
-    "4821622102":
-                  {"name": "Dan L",
-                   "avatar": "views/images/players/5.jpg",
-                   "vs": "views/images/players/5.jpg",
-                   "gfx": false,
-                   "idx": 5
-                  },
-    "4128163210":
-                  {"name": "Chris T",
-                   "avatar": "views/images/players/6.jpg",
-                   "vs": "views/images/players/6.jpg",
-                   "gfx": false,
-                   "idx": 6
-                  },
-    "4117162210":
-                  {"name": "Dylan T",
-                   "avatar": "views/images/players/7.jpg",
-                   "vs": "views/images/players/7.jpg",
-                   "gfx": false,
-                   "idx": 7
-                  },
-    "4931632102":
-                  {"name": "Randi K",
-                   "avatar": "views/images/players/8.jpg",
-                   "vs": "views/images/players/8.jpg",
-                   "gfx": false,
-                   "idx": 8
-                  },
-    "4127163210":
-                  {"name": "Jonathan J",
-                   "avatar": "views/images/players/9.jpg",
-                   "vs": "views/images/players/9.jpg",
-                   "gfx": false,
-                   "idx": 9
-                  },
-    "4611632102":
-                  {"name": "Tom M",
-                   "avatar": "views/images/players/10.jpg",
-                   "vs": "views/images/players/10.jpg",
-                   "gfx": false,
-                   "idx": 10
-                  },
-    "4921632102":
-                  {"name": "",
-                   "avatar": "views/images/players/11.jpg",
-                   "vs": "views/images/players/11.jpg",
-                   "gfx": false,
-                   "idx": 11
-                  },
-    "4291632102":
-                  {"name": "Aubrey F",
-                   "avatar": "views/images/players/12.jpg",
-                   "vs": "views/images/players/12.jpg",
-                   "gfx": false,
-                   "idx": 12
-                  },
-    "4601632102":
-                  {"name": "Chris S",
-                   "avatar": "views/images/players/13.jpg",
-                   "vs": "views/images/players/13.jpg",
-                   "gfx": false,
-                   "idx": 13
-                  },
-    "4253163210":
-                  {"name": "Aaron A",
-                   "avatar": "views/images/players/14.jpg",
-                   "vs": "views/images/players/14.jpg",
-                   "gfx": false,
-                   "idx": 14
-                  },
-    "4281632102":
-                  {"name": "Slavko P",
-                   "avatar": "views/images/players/15/avatar.jpg",
-                   "vs": "views/images/players/15/vs.png",
-                   "gfx": false,
-                   "idx": 15
-                  },
-    "4219163210":
-                  {"name": "Nick P",
-                   "avatar": "views/images/players/16.jpg",
-                   "vs": "views/images/players/16.jpg",
-                   "gfx": false,
-                   "idx": 16
-                  },
-    "4252163210":
-                  {"name": "Corrina",
-                   "avatar": "views/images/players/17.jpg",
-                   "vs": "views/images/players/17.jpg",
-                   "gfx": false,
-                   "idx": 17
-                  },
-    "4187163210":
-                  {"name": "Tyler W",
-                   "avatar": "views/images/players/18.jpg",
-                   "vs": "views/images/players/18.jpg",
-                   "gfx": false,
-                   "idx": 18
-                  },
-    "4218163210":
-                  {"name": "Matt P",
-                   "avatar": "views/images/players/19.jpg",
-                   "vs": "views/images/players/19.jpg",
-                   "gfx": false,
-                   "idx": 19
-                  },
-    "4155163210":
-                  {"name": "Jordan L",
-                   "avatar": "views/images/players/20/avatar.jpg",
-                   "vs": "views/images/players/20/vs.png",
-                   "gfx": false,
-                   "idx": 20
-                  },
-    "4109187106":
-                  {"name": "Peter B",
-                   "avatar": "views/images/players/21/avatar.jpg",
-                   "vs": "views/images/players/21/vs.png",
-                   "gfx": false,
-                   "idx": 21
-                  },
-    "4501622102":
-                  {"name": "Peter B",
-                   "avatar": "views/images/players/21/avatar.jpg",
-                   "vs": "views/images/players/21/vs.png",
-                   "gfx": false,
-                   "idx": 21
-                  },
-    "4123163210":
-                  {"name": "Nathan W",
-                   "avatar": "views/images/players/22.jpg",
-                   "vs": "views/images/players/22.jpg",
-                   "gfx": false,
-                   "idx": 22
-                  },
-    "4154163210":
-                  {"name": "Steve W",
-                   "avatar": "views/images/players/23/avatar.jpg",
-                   "vs": "views/images/players/23/vs.png",
-                   "gfx": false,
-                   "idx": 23
-                  },
-    "4901632102":
-                  {"name": "Ben T",
-                   "avatar": "views/images/players/24/avatar.jpg",
-                   "vs": "views/images/players/24/vs.png",
-                   "gfx": false,
-                   "idx": 24
-                  },
-    "4122163210":
-                  {"name": "Jeebak K",
-                   "avatar": "views/images/players/25.jpg",
-                   "vs": "views/images/players/25.jpg",
-                   "gfx": false,
-                   "idx": 25
-                  },
-    "4561632102":
-                  {"name": "",
-                   "avatar": "views/images/players/26.jpg",
-                   "vs": "views/images/players/26.jpg",
-                   "gfx": false,
-                   "idx": 26
-                  },
-    "4881632102":
-                  {"name": "Jenny O",
-                   "avatar": "views/images/players/27.jpg",
-                   "vs": "views/images/players/27.jpg",
-                   "gfx": false,
-                   "idx": 27
-                  },
-    "4241632102":
-                  {"name": "Robinson E",
-                   "avatar": "views/images/players/28.jpg",
-                   "vs": "views/images/players/28.jpg",
-                   "gfx": false,
-                   "idx": 28
-                  },
-    "4571632102":
-                  {"name": "Keith D",
-                   "avatar": "views/images/players/29.jpg",
-                   "vs": "views/images/players/29.jpg",
-                   "gfx": false,
+    "421816321021656128":
+                  {"name": "Robinson",
+                   "avatar": "themes/toadkombat/images/players/17/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/17/vs.png",
+                   "gfx": true,
                    "idx": 29
                   },
-    "4421642102":
-                  {"name": "Rhienna",
-                   "avatar": "views/images/players/30.jpg",
-                   "vs": "views/images/players/30.jpg",
-                   "gfx": false,
-                   "idx": 30
-                  },
-    "4180160210":
-                  {"name": "Erin N",
-                   "avatar": "views/images/players/31.jpg",
-                   "vs": "views/images/players/31.jpg",
-                   "gfx": false,
-                   "idx": 31
-                  },
-    "4213160210" :
+    "48116021021656128" :
                   {"name": "Aaron K",
-                   "avatar": "views/images/players/32/avatar.jpg",
-                   "vs": "views/images/players/32/vs.png",
-                   "gfx": false,
-                   "idx": 32
+                   "avatar": "themes/toadkombat/images/players/2/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/2/vs.png",
+                   "gfx": true,
+                   "idx": 2
                   },
-    "4147160210":
+    "44916221021656129":
                   {"name": "Brad K",
-                   "avatar": "views/images/players/33.jpg",
-                   "vs": "views/images/players/33.jpg",
-                   "gfx": false,
-                   "idx": 33
+                   "avatar": "themes/toadkombat/images/players/5/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/5/vs.png",
+                   "gfx": true,
+                   "idx": 5
                   },
-    "4179160210":
+    "44216421021656128":
                   {"name": "Simeon W",
                    "avatar": "views/images/players/34.jpg",
                    "vs": "views/images/players/34.jpg",
                    "gfx": false,
                    "idx": 34
                   },
-    "4114160210":
-                  {"name": "Mike L",
-                   "avatar": "views/images/players/35.jpg",
-                   "vs": "views/images/players/35.jpg",
-                   "gfx": false,
-                   "idx": 35
-                  },
-    "4146160210":
+    "48216021021656128":
                   {"name": "Paul A",
                    "avatar": "views/images/players/36/avatar.jpg",
                    "vs": "views/images/players/36/vs.png",
                    "gfx": false,
                    "idx": 36
                   },
-    "4811602102":
-                  {"name": "Darren L",
-                   "avatar": "views/images/players/37.jpg",
-                   "vs": "views/images/players/37.jpg",
-                   "gfx": false,
-                   "idx": 37
-                  },
-    "4113160210":
+    "425316321021656128":
                   {"name": "Cesar J",
-                   "avatar": "views/images/players/38/avatar.jpg",
-                   "vs": "views/images/players/38/vs.png",
+                   "avatar": "themes/toadkombat/images/players/6/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/6/vs.png",
                    "gfx": true,
                    "idx": 38
                   },
-    "4491602102":
-                  {"name": "Farrah B",
-                   "avatar": "views/images/players/39.jpg",
-                   "vs": "views/images/players/39.jpg",
-                   "gfx": false,
-                   "idx": 39
-                  },
-    "4821602102":
-                  {"name": "Tony M",
-                   "avatar": "views/images/players/40.jpg",
-                   "vs": "views/images/players/40.jpg",
-                   "gfx": false,
-                   "idx": 40
-                  },
-    "4151602102":
+    "49216321021656129":
                   {"name": "Marcus B",
-                   "avatar": "views/images/players/41/avatar.jpg",
-                   "vs": "views/images/players/41/vs.png",
-                   "gfx": false,
-                   "idx": 41
+                   "avatar": "themes/toadkombat/images/players/19/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/19/vs.png",
+                   "gfx": true,
+                   "idx": 19
                   },
-    "4481602102" :
-                  {"name": "Alex L",
-                   "avatar": "views/images/players/42.jpg",
-                   "vs": "views/images/players/42.jpg",
-                   "gfx": false,
-                   "idx": 42
-                  },
-    "4421592102":
+    "418016021021656128":
                   {"name": "Sam I",
-                   "avatar": "views/images/players/43.jpg",
-                   "vs": "views/images/players/43.jpg",
-                   "gfx": false,
-                   "idx": 43
+                   "avatar": "themes/toadkombat/images/players/20/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/20/vs.jpg",
+                   "gfx": true,
+                   "idx": 20
                   },
-    "4161602102":
-                  {"name": "Robert L",
-                   "avatar": "views/images/players/44/avatar.jpg",
-                   "vs": "views/images/players/44/vs.png",
-                   "gfx": false,
-                   "idx": 44
-                  },
-    "4771592102":
+    "45616321021656128":
                   {"name": "Kevin M",
-                   "avatar": "views/images/players/45/avatar.jpg",
-                   "vs": "views/images/players/45/vs.png",
-                   "gfx": false,
-                   "idx": 45
-                  },
-    "4431592102":
-                  {"name": "Patrick C",
-                   "avatar": "views/images/players/46.jpg",
-                   "vs": "views/images/players/46.jpg",
-                   "gfx": false,
-                   "idx": 46
-                  },
-    "4108159210":
-                  {"name": "Nate R",
-                   "avatar": "views/images/players/47.jpg",
-                   "vs": "views/images/players/47.jpg",
-                   "gfx": false,
-                   "idx": 47
+                   "avatar": "themes/toadkombat/images/players/13/avatar.jpg",
+                   "vs": "themes/toadkombat/images/players/13/vs.png",
+                   "gfx": true,
+                   "idx": 13
                   }
 }

@@ -242,7 +242,7 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
         player['stances'][key] = jQuery.extend({}, themeManager.themeData.defaultplayer['stances'][key]);
 
         if(player.idx != 0 && player.gfx) {
-          player['stances'][key].image = "/app/views/images/players/" + player.idx + "/" + key + ".gif";
+          player['stances'][key].image = "/app/themes/" + themeManager.getCurrentThemePath() + "/images/players/" + player.idx + "/" + key + ".gif";
         }
         else {
 
