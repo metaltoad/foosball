@@ -120,16 +120,25 @@
     },
     "backgrounds" : {
                     "0": {
-                        "name": "Barista",
-                        "background": "arenas/barista.jpg"
+                        "name": "Palace Gates",
+                        "background": "arenas/palace_gates.png"
                     },
                     "1": {
-                        "name": "Ground Kontrol",
-                        "background": "arenas/director_park.jpg"
+                        "name": "Court Yard",
+                        "background": "arenas/court_yard.png"
                     },
                     "2": {
-                        "name": "Director Park",
-                        "background": "arenas/ground_kontrol.jpg"
+                        "name": "The Pit",
+                        "background": "arenas/the_pit.png"
+                    },
+                    "2": {
+                        "name": "Throne Room",
+                        "background": "arenas/throneroom.png"
+                    },
+                    "2": {
+                        "name": "Warrior Shrine",
+                        "background": "arenas/warriorshrine.png"
                     }
+
     }
 }

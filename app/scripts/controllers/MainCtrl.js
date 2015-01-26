@@ -58,6 +58,12 @@ app.controller('MainCtrl', function($scope, $rootScope, sessionManager, themeMan
   $rootScope.resetGame = function() {
     //deregister the listener
     $scope.keyPressMgr();
+
+    //reset to the toadkombat theme
+    themeManager.loadThemeByName("toadkombat");
+    $scope.currentThemePath = 'toadkombat';
+    $rootScope.currentThemePath = 'toadkombat';
+
     $scope.gameMessageBroadcast();
     playersManager.players = [];
     $location.url("/");
