@@ -1,6 +1,6 @@
 app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeout', '$location', '$rootScope', function(themeManager, gamemessages, $http, $timeout, $location, $rootScope) {
 
-  var scoreTimeout = 2000;
+  var scoreTimeout = 4000;
   var scoreInterval = false;
 
   this.users = {};

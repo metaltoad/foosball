@@ -14,7 +14,7 @@ app.controller('VSCtrl', function($scope, $timeout, $location, playersManager, s
   $scope.location = sessionManager.getRandomBackground();
 
   //timeout the vs screen and go into the game
-  $timeout(function() { $location.url("/game");}, 500);
+  $timeout(function() { $location.url("/game");}, 3000);
 
   document.getElementById("backdrop").style.height= window.innerHeight+"px";
     window.addEventListener("resize", function(e) {
