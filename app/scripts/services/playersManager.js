@@ -221,11 +221,8 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
     //check all the settings if any are missing set them default
     //any other settings should be provided, like name, vs avatar
 
-    //these are likely not provided so go with defaults
-
-    if(!player['stances']) {
-      player['stances'] = {};
-    }
+    //reset these so there are no lingering attack stances if the player doesnt have them
+    player['stances'] = {};
 
     if(!player['taunts']) {
       player['taunts'] = {};
