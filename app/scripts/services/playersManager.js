@@ -232,7 +232,9 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
 
     //set the default stances
     //get a random default player to use
-    var p = Math.floor((Math.random() * themeManager.themeData.defaultplayer.provideddefaults) + 1)
+    if(player.idx == 0) {
+      player.idx = Math.floor((Math.random() * themeManager.themeData.defaultplayer.provideddefaults) + 1)
+    }
 
     for(key in themeManager.themeData.defaultplayer['stances']) {
       if(!player['stances'][key]) {
@@ -244,13 +246,13 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
         else {
 
           //prefix the image with the path and the random character
-          player['stances'][key].image = "/app/themes/" + themeManager.getCurrentThemePath() + "/images/players/" + p + "/" + themeManager.themeData.defaultplayer['stances'][key].image;
+          player['stances'][key].image = "/app/themes/" + themeManager.getCurrentThemePath() + "/images/players/" + player.idx + "/" + themeManager.themeData.defaultplayer['stances'][key].image;
         }
       }
     }
 
     //load the multiple attacks
-    this.loadPlayerScoreImage(2, player, p);
+    this.loadPlayerScoreImage(2, player);
 
     //set the default taunts
     for(key in themeManager.themeData.defaultplayer['taunts']) {
@@ -262,12 +264,12 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
     return player;
   }
 
-  this.loadPlayerScoreImage = function(score, player, playerNumber) {
+  this.loadPlayerScoreImage = function(score, player) {
 
     var s = this;
 
     jQuery.ajax({
-          url:'/app/themes/' + themeManager.getCurrentThemePath() + "/images/players/" + playerNumber + "/score_" + score + ".gif",
+          url:'/app/themes/' + themeManager.getCurrentThemePath() + "/images/players/" + player.idx + "/score_" + score + ".gif",
           type:'HEAD',
           error: function()
           {
@@ -277,14 +279,14 @@ app.service('playersManager', ['themeManager', 'gamemessages', '$http', '$timeou
           {
               player['stances']['score_' + score] = jQuery.extend({}, themeManager.themeData.defaultplayer['stances']['score']);
 
-              player['stances']['score_' + score].image = '/app/themes/' + themeManager.getCurrentThemePath() + "/images/players/" + playerNumber + "/score_" + score + ".gif";
+              player['stances']['score_' + score].image = '/app/themes/' + themeManager.getCurrentThemePath() + "/images/players/" + player.idx + "/score_" + score + ".gif";
               //keep tally of how many were successfully loaded
 
               player.scoreStances = score;
 
               //try and get another stance
               score++;
-              s.loadPlayerScoreImage(score, player, playerNumber);
+              s.loadPlayerScoreImage(score, player);
           }
       });
   }
